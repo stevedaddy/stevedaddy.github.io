@@ -3,46 +3,6 @@
     <head>
         <title>Angular Madlibs</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <style>
-            body{
-                background: #FFF;
-                margin: 0;
-                padding: 0;
-            }
-            main{
-                border: 2px solid #000;
-                width: 670px;
-                margin: 0 auto;
-            }
-            header {
-                border-bottom: 2px solid #000;
-            }
-
-            #logo{
-                width: 20%;
-                border: 2px solid #000;
-                border-width: 0 2px 0px 0;
-                padding: 20px 0;
-                display: inline-block;
-                text-align: center;
-            }
-            #logo img{
-                width: 96px;
-            }
-            #banner {
-                width: 79%;
-                display: inline-block;
-                text-align: center;
-            }
-            #banner img{
-                width: 289px;
-            }
-            #banner h1{
-                text-align: center;
-                margin: 0;
-            }
-
-        </style>
         <script src="//code.angularjs.org/1.3.10/angular.js"></script>
     </head>
     <body>
@@ -56,34 +16,44 @@
             </header>
 
             <section id="madlib-enter-text">
-                <h1>Provide the following words</h1>
+                <h1>Provide the following words:</h1>
                 <ul>
                     <li>
-                        <input type="text" ng-model="female_name" placeholder="Female Name" />
-                        <input ng-model="job_title" type="text" placeholder="Job Title" />
-                        <input ng-model="tedious_task" type="text" placeholder="tedious task" />
+                        <input ng-model="female_name" type="text" placeholder="Female Name" />
+                        <input ng-model="job_title" type="text" placeholder="Job Title" id="job_title" />
+                        <input ng-model="tedious_task" type="text" placeholder="tedious task" id="tedious_task" />
                     </li>
                     <li>
-                        <input ng-model="dirty_task" type="text" placeholder="dirty task" />
-                        <input ng-model="celebrity" type="text" placeholder="celebrity" />
+                        <input ng-model="dirty_task" type="text" placeholder="dirty task" id="dirty_task" />
+                        <input ng-model="celebrity" type="text" placeholder="celebrity" id="celebrity" />
                         <input ng-model="useless_skill" type="text" placeholder="useless skill" />
                     </li>
                     <li>
                         <input ng-model="obnoxiuous_celbertity" type="text" placeholder="obnoxiuous celbertity" />
-                        <input ng-model="huge_number" type="text" placeholder="huge number" />
-                        <input ng-model="adjective" type="text" placeholder="adjective" />
+                        <input ng-model="huge_number" type="text" placeholder="huge number" id="huge_number" />
+                        <input ng-model="adjective" type="text" placeholder="adjective" id="adjective" />
                     </li>
                 </ul>
             </section>
             <section id="madlib-replace-text">
-                <p>{{ female_name || '{{ Female name }\}' }} was a {{ job_title || '{{ job title }\}' }} who loved technology.
-                Although she loved parts of her job, she absolutely hated {{ tedious_task || '{{ tedious task }\}' }} and {{ dirty_task || '{{ dirty task }\}' }}.
-                So, {{ female_name || '{{ female name }\}' }} met with her life mentor {{ celebrity || '{{ celebrity }\}' }} who told her to learn how to  {{ useless_skill || '{{ useless skill }\}' }} with Thinkful.
-                Thinkful didn't offer a course on  {{ useless_skill || '{{ useless skill }\}' }} so she studied programming instead.</p>
+                <p><span class="token">{{ female_name || '{{&nbsp;Female name&nbsp;}\}' }}</span> was a
+                    <span class="token">{{ job_title || '{{&nbsp;job&nbsp;title&nbsp;}\}' }}</span> who loved technology.
+                Although she loved parts of her job, she absolutely hated
+                    <span class="token">{{ tedious_task || '{{&nbsp;tedious&nbsp;task&nbsp;}\}' }}</span> and
+                    <span class="token">{{ dirty_task || '{{&nbsp;dirty&nbsp;task&nbsp;}\}' }}</span>.
+                So, <span class="token">{{ female_name || '{{&nbsp;female&nbsp;name&nbsp;}\}' }}</span> met with her life mentor
+                    <span class="token">{{ celebrity || '{{ celebrity }\}' }}</span> who told her to learn how
+                    <span class="token">{{ useless_skill || '{{&nbsp;useless&nbsp;skill&nbsp;}\}' }}</span> with Thinkful.
+                Thinkful didn't offer a course on
+                    <span class="token">{{ useless_skill || '{{&nbsp;useless&nbsp;skill&nbsp;}\}' }}</span> so she studied programming instead.</p>
 
-                <p>What a great decision! With her new skills, {{ female_name || '{{ Female name }\}' }} built a(n) {{adjective}} robot named
-                {{ obnoxiuous_celbertity || '{{ obnoxiuous celbertity }\}' }} that not
-                only loved {{ dirty_task || '{{ dirty task }\}' }} but did it {{ huge_number || '{{ huge number }\}' }} faster.</p>
+                <p>What a great decision! With her new skills,
+                    <span class="token">{{ female_name || '{{&nbsp;Female&nbsp;name&nbsp;}\}' }}</span> built an
+                    <span class="token">{{ adjective || '{{&nbsp;adjective&nbsp;}\}' }}</span> robot named
+               <span class="token"> {{ obnoxiuous_celbertity || '{{&nbsp;obnoxiuous&nbsp;celbertity&nbsp;}\}' }}</span> that not
+                only loved
+                    <span class="token">{{ dirty_task || '{{&nbsp;dirty&nbsp;task&nbsp;}\}' }}</span> but did it a
+                    <span class="token">{{ huge_number || '{{&nbsp;huge&nbsp;number }\}'&nbsp;}}</span> times faster.</p>
             </section>
         </main>
     </body>
