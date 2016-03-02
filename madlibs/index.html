@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="">
+    <head>
+        <title>Angular Madlibs</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            body{
+                background: #FFF;
+                margin: 0;
+                padding: 0;
+            }
+            main{
+                border: 2px solid #000;
+                width: 670px;
+                margin: 0 auto;
+            }
+            header {
+                border-bottom: 2px solid #000;
+            }
+
+            #logo{
+                width: 20%;
+                border: 2px solid #000;
+                border-width: 0 2px 0px 0;
+                padding: 20px 0;
+                display: inline-block;
+                text-align: center;
+            }
+            #logo img{
+                width: 96px;
+            }
+            #banner {
+                width: 79%;
+                display: inline-block;
+                text-align: center;
+            }
+            #banner img{
+                width: 289px;
+            }
+            #banner h1{
+                text-align: center;
+                margin: 0;
+            }
+
+        </style>
+        <script src="//code.angularjs.org/1.3.10/angular.js"></script>
+    </head>
+    <body>
+        <main role="main">
+            <header>
+                <div id="logo"><img src="images/mad-lib-happy-face.png" /></div>
+                <div id="banner">
+                    <img src="images/ng-mad-libs-logo.png" />
+                     <h1>Automate This!</h1>
+                </div>
+            </header>
+
+            <section id="madlib-enter-text">
+                <h1>Provide the following words</h1>
+                <ul>
+                    <li>
+                        <input type="text" ng-model="female_name" placeholder="Female Name" />
+                        <input ng-model="job_title" type="text" placeholder="Job Title" />
+                        <input ng-model="tedious_task" type="text" placeholder="tedious task" />
+                    </li>
+                    <li>
+                        <input ng-model="dirty_task" type="text" placeholder="dirty task" />
+                        <input ng-model="celebrity" type="text" placeholder="celebrity" />
+                        <input ng-model="useless_skill" type="text" placeholder="useless skill" />
+                    </li>
+                    <li>
+                        <input ng-model="obnoxiuous_celbertity" type="text" placeholder="obnoxiuous celbertity" />
+                        <input ng-model="huge_number" type="text" placeholder="huge number" />
+                        <input ng-model="adjective" type="text" placeholder="adjective" />
+                    </li>
+                </ul>
+            </section>
+            <section id="madlib-replace-text">
+                <p>{{ female_name || '{{ Female name }\}' }} was a {{ job_title || '{{ job title }\}' }} who loved technology.
+                Although she loved parts of her job, she absolutely hated {{ tedious_task || '{{ tedious task }\}' }} and {{ dirty_task || '{{ dirty task }\}' }}.
+                So, {{ female_name || '{{ female name }\}' }} met with her life mentor {{ celebrity || '{{ celebrity }\}' }} who told her to learn how to  {{ useless_skill || '{{ useless skill }\}' }} with Thinkful.
+                Thinkful didn't offer a course on  {{ useless_skill || '{{ useless skill }\}' }} so she studied programming instead.</p>
+
+                <p>What a great decision! With her new skills, {{ female_name || '{{ Female name }\}' }} built a(n) {{adjective}} robot named
+                {{ obnoxiuous_celbertity || '{{ obnoxiuous celbertity }\}' }} that not
+                only loved {{ dirty_task || '{{ dirty task }\}' }} but did it {{ huge_number || '{{ huge number }\}' }} faster.</p>
+            </section>
+        </main>
+    </body>
+</html>
