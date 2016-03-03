@@ -10,13 +10,6 @@ angular.module('myApp', [])
     .constant('ADJ', "adjective")
 
     .controller('inputCtrl', function(NAME, JOB, TASK, DIRTY, CELEB, USLESS, OBNOX, HUGE, ADJ, $scope){
-        //$scope.gender = 'women';
-        //if( $scope.gender.women.formal == '1'){alert('h');}
-        //$scope.gender = function() {
-        //    alert ("" + $scope.gender.name);
-        //};
-
-
         $scope.gender = {
             "men":{
                 "formal": "Male",
@@ -29,30 +22,35 @@ angular.module('myApp', [])
                 "descriptive": "she"
             }
         };
-
+        //wrap the token in curly braces and replace whitespace so it can't word-wrap
         function placeHolderMaker(placeHolder){
-            return '{{\xa0'+ placeHolder +'\xa0}}';
+            placeHolder = '{{ '+ placeHolder +' }}';
+            placeHolder = placeHolder.replace(/\s/g, "\xa0");
+            return placeHolder;
         }
+        //female by default
         $scope.genderchecker = "female";
-
+        // this name token is handeled diffrently because it has gender switching
         $scope.ph_femalename =  $scope.gender.women.formal + NAME;
         $scope.nameToken = placeHolderMaker($scope.ph_femalename);
 
         $scope.RadioChange = function (s) {
+            //change the value on the radio
             $scope.GenderSelected = s;
+            //change the value of this varible back and fourth each time too
             $scope.genderchecker = s;
-           //  alert($scope.genderchecker);
+
             if($scope.genderchecker == "female"){
                 $scope.genderchecker = $scope.gender.women.formal;
             }
             else{
                 $scope.genderchecker = $scope.gender.men.formal;
             }
+            //update the value seen in the name token/placeholder when the radio is changed
             $scope.ph_femalename = $scope.genderchecker + NAME;
             $scope.nameToken = placeHolderMaker($scope.ph_femalename)
         };
-
-
+        
         $scope.ph_jobtitle = JOB;
         $scope.jobtitleToken = placeHolderMaker($scope.ph_jobtitle);
 

@@ -1,76 +1,79 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
-    <head>
-        <title>Angular Madlibs with controller</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="//code.angularjs.org/1.3.10/angular.js"></script>
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <main role="main" ng-controller="inputCtrl">
-            <header>
-                <div id="logo"><img src="images/mad-lib-happy-face.png" /></div>
-                <div id="banner">
-                    <img src="images/ng-mad-libs-logo.png" />
-                     <h1>Automate This!</h1>
-                </div>
-            </header>
+<head>
+    <title>Angular Madlibs with controller</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="//code.angularjs.org/1.3.10/angular.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<main role="main" ng-controller="inputCtrl">
+    <header>
+        <div id="logo"><img src="images/mad-lib-happy-face.png"/></div>
+        <div id="banner">
+            <img src="images/ng-mad-libs-logo.png"/>
 
-            <section id="madlib-enter-text">
-                Choose gender:
-                <form name="myForm">
-                    <label>
-                        <input type="radio" ng-model="gender.name" ng-value="gender.women" ng-change="RadioChange('female')" ng-checked="true">
-                        Woman
-                    </label><br/>
-                    <label>
-                        <input type="radio" ng-model="gender.name" ng-value="gender.men" ng-change="RadioChange('male')">
-                        Man
-                    </label>
-                </form>
-                <h1>Provide the following words:</h1>
-                <ul>
-                    <li>
-                        <input ng-model="name" type="text" placeholder="{{ ph_femalename }}" />
-                        <input ng-model="job_title" type="text" placeholder="{{ ph_jobtitle }}" id="job_title" />
-                        <input ng-model="tedious_task" type="text" placeholder="{{ ph_tedioustask }}" id="tedious_task" />
-                    </li>
-                    <li>
-                        <input ng-model="dirty_task" type="text" placeholder="{{ ph_dirtytask }}" id="dirty_task" />
-                        <input ng-model="celebrity" type="text" placeholder="{{ ph_celebrity }}" id="celebrity" />
-                        <input ng-model="useless_skill" type="text" placeholder="{{ ph_uselessskill }}" />
-                    </li>
-                    <li>
-                        <input ng-model="obnoxiuous_celbertity" type="text" placeholder="{{ ph_obnoxiuous }}" />
-                        <input ng-model="huge_number" type="text" placeholder="{{ ph_huge }}" id="huge_number" />
-                        <input ng-model="adjective" type="text" placeholder="{{ ph_adjective }}" id="adjective" />
-                    </li>
-                </ul>
-            </section>
-            <section id="madlib-replace-text">
-                <p><span class="token">{{ name || nameToken }}</span> was a
-                    <span class="token">{{ job_title || jobtitleToken }}</span> who loved technology.
-                Although {{ gender.name.descriptive || gender.women.descriptive }} loved parts of
-                    {{ gender.name.posessive || gender.women.posessive }} job,
-                    {{ gender.name.descriptive || gender.women.descriptive }} absolutely hated
-                    <span class="token">{{ tedious_task || tedioustaskToken }}</span> and
-                    <span class="token">{{ dirty_task || dirtytaskToken }}</span>.
-                So, <span class="token">{{ name || nameToken }}</span> met with
-                    {{ gender.name.posessive || gender.women.posessive }} life mentor
-                    <span class="token">{{ celebrity || celebrityToken }}</span> who told
-                    {{ gender.name.posessive || gender.women.posessive }} to learn
-                    <span class="token">{{ useless_skill || uselessskillToken }}</span> with Thinkful.
-                Thinkful didn't offer a course on
-                    <span class="token">{{ useless_skill || uselessskillToken }}</span> so
-                    {{ gender.name.descriptive || gender.women.descriptive }} studied programming instead.</p>
-                <p>What a great decision! With {{ gender.name.posessive || gender.women.posessive }} new skills,
-                    <span class="token">{{ name || nameToken }}</span> built an
-                    <span class="token">{{ adjective || adjectiveToken }}</span> robot named
-               <span class="token"> {{ obnoxiuous_celbertity || obnoxiuousToken }}</span> that not
-                only loved
-                    <span class="token">{{ dirty_task || dirtytaskToken }}</span>, but did it a
-                    <span class="token">{{ huge_number || hugeToken }}</span> times faster.</p>
-            </section>
-        </main>
-    </body>
+            <h1>Automate This!</h1>
+        </div>
+    </header>
+
+    <section id="madlib-enter-text">
+        Choose gender:
+        <form name="myForm">
+            <label>
+                <input type="radio" ng-model="gender.name" ng-value="gender.women" ng-change="RadioChange('female')"
+                       ng-checked="true">
+                Woman
+            </label><br/>
+            <label>
+                <input type="radio" ng-model="gender.name" ng-value="gender.men" ng-change="RadioChange('male')">
+                Man
+            </label>
+        </form>
+        <h1>Provide the following words:</h1>
+        <ul>
+            <li>
+                <input ng-model="name" type="text" placeholder="{{ ph_femalename }}"/>
+                <input ng-model="job_title" type="text" placeholder="{{ ph_jobtitle }}" id="job_title"/>
+                <input ng-model="tedious_task" type="text" placeholder="{{ ph_tedioustask }}" id="tedious_task"/>
+            </li>
+            <li>
+                <input ng-model="dirty_task" type="text" placeholder="{{ ph_dirtytask }}" id="dirty_task"/>
+                <input ng-model="celebrity" type="text" placeholder="{{ ph_celebrity }}" id="celebrity"/>
+                <input ng-model="useless_skill" type="text" placeholder="{{ ph_uselessskill }}"/>
+            </li>
+            <li>
+                <input ng-model="obnoxiuous_celbertity" type="text" placeholder="{{ ph_obnoxiuous }}"/>
+                <input ng-model="huge_number" type="text" placeholder="{{ ph_huge }}" id="huge_number"/>
+                <input ng-model="adjective" type="text" placeholder="{{ ph_adjective }}" id="adjective"/>
+            </li>
+        </ul>
+    </section>
+    <section id="madlib-replace-text">
+        <p><span class="token">{{ name || nameToken }}</span> was a
+            <span class="token">{{ job_title || jobtitleToken }}</span> who loved technology.
+            Although {{ gender.name.descriptive || gender.women.descriptive }} loved parts of
+            {{ gender.name.posessive || gender.women.posessive }} job,
+            {{ gender.name.descriptive || gender.women.descriptive }} absolutely hated
+            <span class="token">{{ tedious_task || tedioustaskToken }}</span> and
+            <span class="token">{{ dirty_task || dirtytaskToken }}</span>.
+            So, <span class="token">{{ name || nameToken }}</span> met with
+            {{ gender.name.posessive || gender.women.posessive }} life mentor
+            <span class="token">{{ celebrity || celebrityToken }}</span> who told
+            {{ gender.name.posessive || gender.women.posessive }} to learn
+            <span class="token">{{ useless_skill || uselessskillToken }}</span> with Thinkful.
+            Thinkful didn't offer a course on
+            <span class="token">{{ useless_skill || uselessskillToken }}</span> so
+            {{ gender.name.descriptive || gender.women.descriptive }} studied programming instead.</p>
+
+        <p>What a great decision! With {{ gender.name.posessive || gender.women.posessive }} new skills,
+            <span class="token">{{ name || nameToken }}</span> built an
+            <span class="token">{{ adjective || adjectiveToken }}</span> robot named
+            <span class="token"> {{ obnoxiuous_celbertity || obnoxiuousToken }}</span> that not
+            only loved
+            <span class="token">{{ dirty_task || dirtytaskToken }}</span>, but did it a
+            <span class="token">{{ huge_number || hugeToken }}</span> times faster.</p>
+    </section>
+</main>
+</body>
 </html>
