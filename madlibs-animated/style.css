@@ -8,6 +8,7 @@ main{
     border: 2px solid #000;
     width: 580px;
     margin: 30px auto 0;
+    overflow: hidden;
 }
 header {
     border-bottom: 2px solid #000;
@@ -43,8 +44,10 @@ header {
     margin: 0;
 }
 #madlib-enter-text{
-    border-bottom: 2px solid #000;
+
     padding: 10px 50px 40px;
+    width: 42%;
+    float: left;
 }
 #madlib-enter-text h1{
     font-weight: normal;
@@ -73,6 +76,8 @@ header {
     padding: 10px 50px 30px;
     font-weight: bold;
     line-height: 1.5em;
+    width: 40%;
+    float: left;
 
 }
 p{word-break: keep-all;}
@@ -88,44 +93,133 @@ p{word-break: keep-all;}
 #madlib-enter-text ul li input#huge_number{
     width: 75px;
 }
+#page-hor{
+    width: 1160px;
+    float: left;
+}
+}
+/* ANIMATION *//* when hiding the thing */
+.ng-hide-add         {
+    -webkit-animation:0.5s lightSpeedOut ease, 4s highlightTokens;
+    -webkit-animation-delay: 0, 0.5s;
+    animation-delay: 0, 0.5s;
+    animation:0.5s lightSpeedOut ease;
+}
 
-/* ANIMATION */
-@-webkit-keyframes swiper {
-    from {
-        margin-left: 0%;
-        width: 100%;  }
-    to {
-        width: 0%;
-        margin-left: -100%;
+/* when showing the thing */
+.ng-hide-remove      {
+    -webkit-animation:0.5s flipInX ease;
+    animation:0.5s flipInX ease;
+}
+.ng-hide-remove .token  {
+    -webkit-animation:4s highlightTokens;
+    animation:4s highlightTokens;
+}
+
+/* ANIMATIONS (FROM ANIMATE.CSS) */
+@-webkit-keyframes highlightTokens {
+    0% {
+            border-color: darkorange;
+    }
+
+    100% {
+            border-color: black;
     }
 }
-@-webkit-keyframes swiperAway {
-    from {
-        width: 0%;
-        margin-left: -100%;
+
+/* flip in */
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        opacity: 0;
     }
-    to {
-        width: 100%;
-        margin-left: 0%;
-        }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
 }
-#madlib-replace-text.ng-hide {
-    float:left;
-    overflow: hidden;
-    -webkit-animation: swiperAway 1s;
+
+@keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -ms-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -ms-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        -ms-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        -ms-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        -ms-transform: perspective(400px);
+        transform: perspective(400px);
+    }
 }
-#madlib-replace-text.ng-hide #madlib-enter-text{
-    float:left;
-    overflow: hidden;
-    -webkit-animation: swiper 1s;
+
+/* light speed out */
+@-webkit-keyframes lightSpeedOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+        transform: translate3d(100%, 0, 0) skewX(30deg);
+        opacity: 0;
+    }
 }
-#madlib-enter-text.ng-hide{
-    overflow: hidden;
-    float:left;
-    -webkit-animation: swiper 1s;
-}
-#madlib-enter-text.ng-hide #madlib-replace-text{
-    overflow: hidden;
-    float:left;
-    -webkit-animation: swiperAway 1s;
-}
+
+@keyframes lightSpeedOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+        -ms-transform: translate3d(100%, 0, 0) skewX(30deg);
+        transform: translate3d(100%, 0, 0) skewX(30deg);
+        opacity: 0;
+    }

@@ -17,97 +17,98 @@
             <h1>Automate This!</h1>
         </div>
     </header>
+    <section id="page-hor">
+        <section id="madlib-enter-text"  ng-show="!formTab">
+            Choose gender:
+            <form name="myForm">
+                <label>
+                    <input type="radio" ng-model="gender.name" ng-value="gender.women" ng-change="RadioChange('female')"
+                           ng-checked="true">
+                    Woman
+                </label><br/>
+                <label>
+                    <input type="radio" ng-model="gender.name" ng-value="gender.men" ng-change="RadioChange('male')">
+                    Man
+                </label>
+            </form>
+            <h1>Provide the following words:</h1>
+            <form id="madLibsForm" name="madLibsForm"  ng-submit="submit()" novalidate>
+                <ul>
+                    <li>
+                        <input ng-model="name" name="name" type="text" placeholder="{{ ph_femalename }}" required/>
+                        <div ng-if="madLibsForm.$submitted && madLibsForm.name.$error.required" ng-messages="madLibsForm.name.$error">
+                            <span class="error" ng-message="required">Field is required!</span>
+                        </div>
+                        <input ng-model="job_title" name="job_title" type="text" placeholder="{{ ph_jobtitle }}" id="job_title" required/>
+                        <div ng-if="madLibsForm.$submitted && madLibsForm.job_title.$error.required" ng-messages="madLibsForm.name.$error">
+                            <span class="error" ng-message="required">Field is required!</span>
+                        </div>
+                        <input ng-model="tedious_task" name="tedious_task" type="text" placeholder="{{ ph_tedioustask }}" id="tedious_task" required/>
+                        <div ng-if="madLibsForm.$submitted && madLibsForm.tedious_task.$error.required" ng-messages="madLibsForm.name.$error">
+                            <span class="error" ng-message="required">Field is required!</span>
+                        </div>
+                    </li>
+                    <li>
+                        <input ng-model="dirty_task" name="dirty_task" type="text" placeholder="{{ ph_dirtytask }}" id="dirty_task" required/>
+                        <div ng-if="madLibsForm.$submitted && madLibsForm.dirty_task.$error.required" ng-messages="madLibsForm.name.$error">
+                            <span class="error" ng-message="required">Field is required!</span>
+                        </div>
+                        <input ng-model="celebrity" name="celebrity" type="text" placeholder="{{ ph_celebrity }}" id="celebrity" required/>
+                        <div ng-if="madLibsForm.$submitted && madLibsForm.celebrity.$error.required" ng-messages="madLibsForm.name.$error">
+                            <span class="error" ng-message="required">Field is required!</span>
+                        </div>
+                        <input ng-model="useless_skill" name="useless_skill" type="text" placeholder="{{ ph_uselessskill }}" required/>
+                        <div ng-if="madLibsForm.$submitted && madLibsForm.useless_skill.$error.required" ng-messages="madLibsForm.name.$error">
+                            <span class="error" ng-message="required">Field is required!</span>
+                        </div>
+                    </li>
+                    <li>
+                        <input ng-model="obnoxiuous_celbertity" name="obnoxiuous_celbertity" type="text" placeholder="{{ ph_obnoxiuous }}" required/>
+                        <div ng-if="madLibsForm.$submitted && madLibsForm.obnoxiuous_celbertity.$error.required" ng-messages="madLibsForm.name.$error">
+                            <span class="error" ng-message="required">Field is required!</span>
+                        </div>
+                        <input ng-model="huge_number" name="huge_number" type="number" placeholder="{{ ph_huge }}" id="huge_number" required/>
+                        <div ng-if="madLibsForm.$submitted && madLibsForm.huge_number.$error.required" ng-messages="madLibsForm.name.$error">
+                            <span class="error" ng-message="required">Field is required!</span>
+                            <span class="error" ng-show="madLibsForm.huge_number.$error.number">Field must be a number!</span>
+                        </div>
+                        <input ng-model="adjective" name="adjective" type="text" placeholder="{{ ph_adjective }}" id="adjective" required/>
+                        <div ng-if="madLibsForm.$submitted && madLibsForm.adjective.$error.required" ng-messages="madLibsForm.name.$error">
+                            <span class="error" ng-message="required">Field is required!</span>
+                        </div>
+                    </li>
+                </ul>
+                <button type="submit">Submit</button>
+            </form>
 
-    <section id="madlib-enter-text"  ng-show="!formTab">
-        Choose gender:
-        <form name="myForm">
-            <label>
-                <input type="radio" ng-model="gender.name" ng-value="gender.women" ng-change="RadioChange('female')"
-                       ng-checked="true">
-                Woman
-            </label><br/>
-            <label>
-                <input type="radio" ng-model="gender.name" ng-value="gender.men" ng-change="RadioChange('male')">
-                Man
-            </label>
-        </form>
-        <h1>Provide the following words:</h1>
-        <form id="madLibsForm" name="madLibsForm"  ng-submit="submit()" novalidate>
-            <ul>
-                <li>
-                    <input ng-model="name" name="name" type="text" placeholder="{{ ph_femalename }}" required/>
-                    <div ng-if="madLibsForm.$submitted && madLibsForm.name.$error.required" ng-messages="madLibsForm.name.$error">
-                        <span class="error" ng-message="required">Field is required!</span>
-                    </div>
-                    <input ng-model="job_title" name="job_title" type="text" placeholder="{{ ph_jobtitle }}" id="job_title" required/>
-                    <div ng-if="madLibsForm.$submitted && madLibsForm.job_title.$error.required" ng-messages="madLibsForm.name.$error">
-                        <span class="error" ng-message="required">Field is required!</span>
-                    </div>
-                    <input ng-model="tedious_task" name="tedious_task" type="text" placeholder="{{ ph_tedioustask }}" id="tedious_task" required/>
-                    <div ng-if="madLibsForm.$submitted && madLibsForm.tedious_task.$error.required" ng-messages="madLibsForm.name.$error">
-                        <span class="error" ng-message="required">Field is required!</span>
-                    </div>
-                </li>
-                <li>
-                    <input ng-model="dirty_task" name="dirty_task" type="text" placeholder="{{ ph_dirtytask }}" id="dirty_task" required/>
-                    <div ng-if="madLibsForm.$submitted && madLibsForm.dirty_task.$error.required" ng-messages="madLibsForm.name.$error">
-                        <span class="error" ng-message="required">Field is required!</span>
-                    </div>
-                    <input ng-model="celebrity" name="celebrity" type="text" placeholder="{{ ph_celebrity }}" id="celebrity" required/>
-                    <div ng-if="madLibsForm.$submitted && madLibsForm.celebrity.$error.required" ng-messages="madLibsForm.name.$error">
-                        <span class="error" ng-message="required">Field is required!</span>
-                    </div>
-                    <input ng-model="useless_skill" name="useless_skill" type="text" placeholder="{{ ph_uselessskill }}" required/>
-                    <div ng-if="madLibsForm.$submitted && madLibsForm.useless_skill.$error.required" ng-messages="madLibsForm.name.$error">
-                        <span class="error" ng-message="required">Field is required!</span>
-                    </div>
-                </li>
-                <li>
-                    <input ng-model="obnoxiuous_celbertity" name="obnoxiuous_celbertity" type="text" placeholder="{{ ph_obnoxiuous }}" required/>
-                    <div ng-if="madLibsForm.$submitted && madLibsForm.obnoxiuous_celbertity.$error.required" ng-messages="madLibsForm.name.$error">
-                        <span class="error" ng-message="required">Field is required!</span>
-                    </div>
-                    <input ng-model="huge_number" name="huge_number" type="number" placeholder="{{ ph_huge }}" id="huge_number" required/>
-                    <div ng-if="madLibsForm.$submitted && madLibsForm.huge_number.$error.required" ng-messages="madLibsForm.name.$error">
-                        <span class="error" ng-message="required">Field is required!</span>
-                        <span class="error" ng-show="madLibsForm.huge_number.$error.number">Field must be a number!</span>
-                    </div>
-                    <input ng-model="adjective" name="adjective" type="text" placeholder="{{ ph_adjective }}" id="adjective" required/>
-                    <div ng-if="madLibsForm.$submitted && madLibsForm.adjective.$error.required" ng-messages="madLibsForm.name.$error">
-                        <span class="error" ng-message="required">Field is required!</span>
-                    </div>
-                </li>
-            </ul>
-            <button type="submit">Submit</button>
-        </form>
+        </section>
+        <section id="madlib-replace-text" ng-hide="!formTab">
+            <p><span class="token">{{ name || nameToken }}</span> was a
+                <span class="token">{{ job_title || jobtitleToken }}</span> who loved technology.
+                Although {{ gender.name.descriptive || gender.women.descriptive }} loved parts of
+                {{ gender.name.posessive || gender.women.posessive }} job,
+                {{ gender.name.descriptive || gender.women.descriptive }} absolutely hated
+                <span class="token">{{ tedious_task || tedioustaskToken }}</span> and
+                <span class="token">{{ dirty_task || dirtytaskToken }}</span>.
+                So, <span class="token">{{ name || nameToken }}</span> met with
+                {{ gender.name.posessive || gender.women.posessive }} life mentor
+                <span class="token">{{ celebrity || celebrityToken }}</span> who told
+                {{ gender.name.posessive || gender.women.posessive }} to learn
+                <span class="token">{{ useless_skill || uselessskillToken }}</span> with Thinkful.
+                Thinkful didn't offer a course on
+                <span class="token">{{ useless_skill || uselessskillToken }}</span> so
+                {{ gender.name.descriptive || gender.women.descriptive }} studied programming instead.</p>
 
-    </section>
-    <section id="madlib-replace-text" ng-hide="!formTab">
-        <p><span class="token">{{ name || nameToken }}</span> was a
-            <span class="token">{{ job_title || jobtitleToken }}</span> who loved technology.
-            Although {{ gender.name.descriptive || gender.women.descriptive }} loved parts of
-            {{ gender.name.posessive || gender.women.posessive }} job,
-            {{ gender.name.descriptive || gender.women.descriptive }} absolutely hated
-            <span class="token">{{ tedious_task || tedioustaskToken }}</span> and
-            <span class="token">{{ dirty_task || dirtytaskToken }}</span>.
-            So, <span class="token">{{ name || nameToken }}</span> met with
-            {{ gender.name.posessive || gender.women.posessive }} life mentor
-            <span class="token">{{ celebrity || celebrityToken }}</span> who told
-            {{ gender.name.posessive || gender.women.posessive }} to learn
-            <span class="token">{{ useless_skill || uselessskillToken }}</span> with Thinkful.
-            Thinkful didn't offer a course on
-            <span class="token">{{ useless_skill || uselessskillToken }}</span> so
-            {{ gender.name.descriptive || gender.women.descriptive }} studied programming instead.</p>
+            <p>What a great decision! With {{ gender.name.posessive || gender.women.posessive }} new skills,
+                <span class="token">{{ name || nameToken }}</span> built an
+                <span class="token">{{ adjective || adjectiveToken }}</span> robot named
+                <span class="token"> {{ obnoxiuous_celbertity || obnoxiuousToken }}</span> that not
+                only loved
+                <span class="token">{{ dirty_task || dirtytaskToken }}</span>, but did it a
+                <span class="token">{{ huge_number || hugeToken }}</span> times faster.</p>
 
-        <p>What a great decision! With {{ gender.name.posessive || gender.women.posessive }} new skills,
-            <span class="token">{{ name || nameToken }}</span> built an
-            <span class="token">{{ adjective || adjectiveToken }}</span> robot named
-            <span class="token"> {{ obnoxiuous_celbertity || obnoxiuousToken }}</span> that not
-            only loved
-            <span class="token">{{ dirty_task || dirtytaskToken }}</span>, but did it a
-            <span class="token">{{ huge_number || hugeToken }}</span> times faster.</p>
-
-        <button ng-click="formReset()">Reset</button>
+            <button ng-click="formReset()">Reset</button>
+        </section>
     </section>
 </main>
 </body>
