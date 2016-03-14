@@ -1,0 +1,131 @@
+body{
+    background: #FFF;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+main{
+    border: 2px solid #000;
+    width: 580px;
+    margin: 30px auto 0;
+}
+header {
+    border-bottom: 2px solid #000;
+}
+
+#logo{
+    width: 24%;
+    border: 2px solid #000;
+    border-width: 0 2px 0px 0;
+    padding: 6px 0;
+    display: inline-block;
+    text-align: center;
+    border-spacing: 0;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+#logo img{
+    width: 69px;
+}
+#banner {
+    width: 75%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+#banner img{
+    width: 164px;
+    display: block;
+    margin: 5px auto -5px;
+}
+#banner h1{
+    text-align: center;
+    margin: 0;
+}
+#madlib-enter-text{
+    border-bottom: 2px solid #000;
+    padding: 10px 50px 40px;
+}
+#madlib-enter-text h1{
+    font-weight: normal;
+}
+#madlib-enter-text ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#madlib-enter-text ul li{
+    width: 32%;
+    display: inline-block;
+    text-align: center;
+}
+#madlib-enter-text ul li input {
+    width: 100px;
+    padding: 4px;
+    margin-bottom: 10px;
+    border: 2px solid #000;
+    color: #000;
+}
+#madlib-enter-text ul li input::-webkit-input-placeholder{
+    color: #000;
+}
+#madlib-replace-text{
+    padding: 10px 50px 30px;
+    font-weight: bold;
+    line-height: 1.5em;
+
+}
+p{word-break: keep-all;}
+#madlib-replace-text .token{
+    border-bottom: 2px solid #000;
+}
+#madlib-enter-text ul li input#job_title,
+#madlib-enter-text ul li input#adjective{
+    width: 60px;
+}
+#madlib-enter-text ul li input#dirty_task,
+#madlib-enter-text ul li input#celebrity,
+#madlib-enter-text ul li input#huge_number{
+    width: 75px;
+}
+
+/* ANIMATION */
+@-webkit-keyframes swiper {
+    from {
+        margin-left: 0%;
+        width: 100%;  }
+    to {
+        width: 0%;
+        margin-left: -100%;
+    }
+}
+@-webkit-keyframes swiperAway {
+    from {
+        width: 0%;
+        margin-left: -100%;
+    }
+    to {
+        width: 100%;
+        margin-left: 0%;
+        }
+}
+#madlib-replace-text.ng-hide {
+    float:left;
+    overflow: hidden;
+    -webkit-animation: swiperAway 1s;
+}
+#madlib-replace-text.ng-hide #madlib-enter-text{
+    float:left;
+    overflow: hidden;
+    -webkit-animation: swiper 1s;
+}
+#madlib-enter-text.ng-hide{
+    overflow: hidden;
+    float:left;
+    -webkit-animation: swiper 1s;
+}
+#madlib-enter-text.ng-hide #madlib-replace-text{
+    overflow: hidden;
+    float:left;
+    -webkit-animation: swiperAway 1s;
+}
