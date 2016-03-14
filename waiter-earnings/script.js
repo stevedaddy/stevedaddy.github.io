@@ -4,20 +4,20 @@ angular.module('waiterEarnings', [])
             return $filter('number')(input*100, decimals)+'%';
         };
     }])
-    //.filter('currency', ['$filter', function($filter) {
-    //
-    //}])
-
     .controller('inputCtrl', function($scope){
-        $scope.phtaxRatePrice = '0.00';
-      //  $scope.taxRatePrice = $scope.taxRate * $scope.baseMealPrice;
+    //should I set these as constants?
+        $scope.phtaxRatePrice = 0;
+        $scope.customerSubTotal = 0;
+        $scope.customerTip = 0;
+        $scope.customerTotal = 0;
+        $scope.earningsTipTotalCount = 0;
+        $scope.earningsTipTotal = 0;
+        $scope.earningsAvgTip = 0;
 
+    // is this logical for the percent?
         roundedPercentage = function(myValue){
             return myValue * .01;
-            //var result = ((myValue/totalValue))
-            //return Math.round(result, 2);
         }
-
         $scope.formCancel = function(clickEvent) {
             // Set back to pristine.
             $scope.mealDetails.$setPristine();
@@ -38,24 +38,34 @@ angular.module('waiterEarnings', [])
             $scope.customerSubTotal = '';
             $scope.customerTip =  '';
             $scope.customerTotal = '';
+            $scope.earningsTipTotalCount = 0;
+            $scope.earningsTipTotal = 0;
+            $scope.earningsMealCount = 0;
+            $scope.earningsAvgTip = 0;
         }
-
         $scope.submitMealDetails = function(){
-            // console.log($scope.data);
             $scope.taxRateRound = roundedPercentage($scope.taxRate);
             $scope.tipPercentRound = roundedPercentage($scope.tipPercent);
-           // console.log($scope.taxRateRounded);
 
-
-            if( $scope.mealDetails.$valid ) {
+            if ($scope.mealDetails.$valid) {
                 console.log('The form is valid');
-             //   $scope.formTab = '!formTab';
                 $scope.customerSubTotal = $scope.baseMealPrice + ($scope.taxRateRound * $scope.baseMealPrice);
-                $scope.customerTip =  $scope.customerSubTotal * $scope.tipPercentRound;
+                $scope.customerTip = $scope.customerSubTotal * $scope.tipPercentRound;
                 $scope.customerTotal = ($scope.customerSubTotal) + ($scope.customerTip) * $scope.tipPercentRound;
-              //  $scope.customerTotal = $filter('currency')($scope.customerTotal);
-            } else {
-                // console.log('The form is invalid');
+                //  $scope.customerTotal = $filter('currency')($scope.customerTotal);
+
+                if (typeof $scope.earningsMealCount != 'undefined') {
+                    $scope.earningsTipTotal = $scope.customerTip + $scope.earningsTipTotal;
+                    $scope.earningsMealCount = $scope.earningsMealCount + 1;
+                  //console.log($scope.earningsTipTotal + ' by ' + $scope.earningsMealCount);
+                    $scope.earningsAvgTip = $scope.earningsTipTotal / $scope.earningsMealCount;
+                }
+                else {
+                    $scope.earningsMealCount = 1;
+                    $scope.earningsTipTotalCount = 0;
+                    $scope.earningsTipTotal = $scope.earningsTipTotal + $scope.earningsTipTotalCount;
+                    $scope.earningsAvgTip = $scope.earningsAvgTip;
+                }
             }
         }
     });

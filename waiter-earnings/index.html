@@ -14,49 +14,50 @@
 
     <section id="meal-details">
         <h2 class="section-head">Enter Meal Details</h2>
-        <form name="mealDetails" novalidate>
-            <label> Base Meal Price $
-                <input ng-model="baseMealPrice" name="baseMealPrice" type="number" placeholder="" required/>
-                <div ng-if="mealDetails.$submitted && mealDetails.baseMealPrice.$error.required" ng-messages="mealDetails.baseMealPrice.$error">
-                    <span class="error" ng-message="required">Field is required!</span>
-                </div>
-            </label>
-            <label> Tax Rate %
-                 <input ng-model="taxRate" name="taxRate" type="number" placeholder="" required/>
-                <div ng-if="mealDetails.$submitted && mealDetails.taxRate.$error.required" ng-messages="mealDetails.taxRate.$error">
-                    <span class="error" ng-message="required">Field is required!</span>
-                </div>
-            </label>
-            <label> Tip Percentage %
-                  <input ng-model="tipPercent" name="tipPercent" type="number" placeholder="" required/>
-                <div ng-if="mealDetails.$submitted && mealDetails.tipPercent.$error.required" ng-messages="mealDetails.tipPercent.$error">
-                    <span class="error" ng-message="required">Field is required!</span>
-                </div>
-            </label>
-            <button type="submit" id="btnSubmit" value="Submit" ng-click="submitMealDetails()">Submit</button>
-            <button type="submit" id="btnCancle" value="Cancle"  ng-click="formCancel()">cancel</button>
-        </form>
+        <div class="wrapper">
+            <form name="mealDetails" novalidate>
+                <label> Base Meal Price $
+                    <input ng-model="baseMealPrice" name="baseMealPrice" type="number" placeholder="" required/>
+                    <div ng-if="mealDetails.$submitted && mealDetails.baseMealPrice.$error.required" ng-messages="mealDetails.baseMealPrice.$error">
+                        <span class="error" ng-message="required">Field is required!</span>
+                    </div>
+                </label>
+                <label> Tax Rate %
+                     <input ng-model="taxRate" name="taxRate" type="number" class="shorters" placeholder="" required/>
+                    <div ng-if="mealDetails.$submitted && mealDetails.taxRate.$error.required" ng-messages="mealDetails.taxRate.$error">
+                        <span class="error" ng-message="required">Field is required!</span>
+                    </div>
+                </label>
+                <label> Tip Percentage %
+                      <input ng-model="tipPercent" name="tipPercent" type="number" class="shorters" placeholder="" required/>
+                    <div ng-if="mealDetails.$submitted && mealDetails.tipPercent.$error.required" ng-messages="mealDetails.tipPercent.$error">
+                        <span class="error" ng-message="required">Field is required!</span>
+                    </div>
+                </label>
+                <div id="submittMealDetails">
+                    <button type="submit" id="btnSubmit" value="Submit" ng-click="submitMealDetails()">Submit</button>
+                    <button type="submit" id="btnCancle" value="Cancle"  ng-click="formCancel()">Cancel</button>
+                <div>
+            </form>
+        </div>
     </section>
 
     <section id="customer-charges">
         <h2 class="section-head">Customer Charges</h2>
-
-        <div class="returnValue">Subtotal: {{ customerSubTotal | currency: "$" : 2 || phtaxRatePrice }}</div>
-        <div class="returnValue">Tip: {{ customerTip | currency: "$" : 2|| phtaxRatePrice }}</div>
-        <div class="returnValue">Total: {{ customerTotal | currency: "$" : 2 || phtaxRatePrice }}</div>
-
+        <div class="wrapper">
+            <div class="returnValue">Subtotal: {{ customerSubTotal | currency: "$" : 2 || phtaxRatePrice }}</div>
+            <div class="returnValue totalLine">Tip: {{ customerTip | currency: "$" : 2|| phtaxRatePrice }}</div>
+            <div class="returnValue">Total: {{ customerTotal | currency: "$" : 2 || phtaxRatePrice }}</div>
+        </div>
     </section>
 
     <section id="my-earnings-info">
         <h2 class="section-head">My Earnings Info</h2>
-
-        <p>What a great decision! With {{ gender.name.posessive || gender.women.posessive }} new skills,
-            <span class="token">{{ name || nameToken }}</span> built an
-            <span class="token">{{ adjective || adjectiveToken }}</span> robot named
-            <span class="token"> {{ obnoxiuous_celbertity || obnoxiuousToken }}</span> that not
-            only loved
-            <span class="token">{{ dirty_task || dirtytaskToken }}</span>, but did it a
-            <span class="token">{{ huge_number || hugeToken }}</span> times faster.</p>
+        <div class="wrapper">
+            <div class="returnValue">Tip Total: {{ earningsTipTotal | currency: "$" : 2 || phtaxRatePrice }}</div>
+            <div class="returnValue mealCountpad">Meal Count: {{ earningsMealCount || '0' }}</div>
+            <div class="returnValue">Average Tip Per Meal: {{ earningsAvgTip | currency: "$" : 2 || phtaxRatePrice }}</div>
+        </div>
 
     </section>
 
