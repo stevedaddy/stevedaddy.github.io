@@ -1,0 +1,225 @@
+body{
+    background: #FFF;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+main{
+    border: 2px solid #000;
+    width: 580px;
+    margin: 30px auto 0;
+    overflow: hidden;
+}
+header {
+    border-bottom: 2px solid #000;
+}
+
+#logo{
+    width: 24%;
+    border: 2px solid #000;
+    border-width: 0 2px 0px 0;
+    padding: 6px 0;
+    display: inline-block;
+    text-align: center;
+    border-spacing: 0;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+#logo img{
+    width: 69px;
+}
+#banner {
+    width: 75%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+#banner img{
+    width: 164px;
+    display: block;
+    margin: 5px auto -5px;
+}
+#banner h1{
+    text-align: center;
+    margin: 0;
+}
+#madlib-enter-text{
+
+    padding: 10px 50px 40px;
+    width: 42%;
+    float: left;
+}
+#madlib-enter-text h1{
+    font-weight: normal;
+}
+#madlib-enter-text ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#madlib-enter-text ul li{
+    width: 32%;
+    display: inline-block;
+    text-align: center;
+}
+#madlib-enter-text ul li input {
+    width: 100px;
+    padding: 4px;
+    margin-bottom: 10px;
+    border: 2px solid #000;
+    color: #000;
+}
+#madlib-enter-text ul li input::-webkit-input-placeholder{
+    color: #000;
+}
+#madlib-replace-text{
+    padding: 10px 50px 30px;
+    font-weight: bold;
+    line-height: 1.5em;
+    width: 40%;
+    float: left;
+
+}
+p{word-break: keep-all;}
+#madlib-replace-text .token{
+    border-bottom: 2px solid #000;
+}
+#madlib-enter-text ul li input#job_title,
+#madlib-enter-text ul li input#adjective{
+    width: 60px;
+}
+#madlib-enter-text ul li input#dirty_task,
+#madlib-enter-text ul li input#celebrity,
+#madlib-enter-text ul li input#huge_number{
+    width: 75px;
+}
+#page-hor{
+    width: 1160px;
+    float: left;
+}
+}
+/* ANIMATION *//* when hiding the thing */
+.ng-hide-add         {
+    -webkit-animation:0.5s lightSpeedOut ease, 4s highlightTokens;
+    -webkit-animation-delay: 0, 0.5s;
+    animation-delay: 0, 0.5s;
+    animation:0.5s lightSpeedOut ease;
+}
+
+/* when showing the thing */
+.ng-hide-remove      {
+    -webkit-animation:0.5s flipInX ease;
+    animation:0.5s flipInX ease;
+}
+.ng-hide-remove .token  {
+    -webkit-animation:4s highlightTokens;
+    animation:4s highlightTokens;
+}
+
+/* ANIMATIONS (FROM ANIMATE.CSS) */
+@-webkit-keyframes highlightTokens {
+    0% {
+            border-color: darkorange;
+    }
+
+    100% {
+            border-color: black;
+    }
+}
+
+/* flip in */
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+@keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -ms-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -ms-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        -ms-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        -ms-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        -ms-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+/* light speed out */
+@-webkit-keyframes lightSpeedOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+        transform: translate3d(100%, 0, 0) skewX(30deg);
+        opacity: 0;
+    }
+}
+
+@keyframes lightSpeedOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+        -ms-transform: translate3d(100%, 0, 0) skewX(30deg);
+        transform: translate3d(100%, 0, 0) skewX(30deg);
+        opacity: 0;
+    }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="flickerSearcher">
+<head>
+    <title>Flicker Searcher</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="//code.angularjs.org/1.3.10/angular.js"></script>
+    <script type="text/javascript" src="//code.angularjs.org/1.3.10/angular-animate.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<main role="main" ng-controller="inputCtrl">
+    <header>
+      <h1>Flicker Searcher</h1>
+    </header>
+    <section id="flicker-search-field" >
+        <form name="searchForm" ng-submit="searchFlicker(searcher)" novalidate>
+          <input ng-model="searcher" name="searcher" type="text" placeholder="{{ ph_searcher }}" required/>
+          <button type="submit">Submit</button>
+          <div ng-if="searchForm.$submitted && searchForm.searcher.$error.required" ng-messages="searchForm.searcher.$error">
+              <span class="error" ng-message="required">Field is required!</span>
+          </div>
+        </form>
+
+        <div class="results" ng-if="results">
+        <h2>We found {{ results.length }} results for {{ searcher }}</h2>
+        <div ng-repeat="result in results">
+          <img ng-src="https://farm{{result.farm}}.staticflickr.com/{{result.server}}/{{result.id}}_{{result.secret}}.jpg" />
+          
+      </div>
+    </section>
+
+</main>
+</body>
+</html>
