@@ -3,7 +3,7 @@ angular.module('flickerSearcher', ['ngAnimate'])
 	$httpProvider.defaults.useXDomain = true;
   //delete $httpProvider.defaults.headers.common['X-Requested-With'];
 })
-.controller('inputCtrl', function($scope, $http, $sce){
+.controller('inputCtrl', ['$scope', '$http', '$sce' ,function($scope, $http, $sce){
   $scope.embedUrl = "http://www.youtube.com/embed/";
 
   $scope.trustSrc = function(src) {
@@ -50,4 +50,4 @@ angular.module('flickerSearcher', ['ngAnimate'])
       }
   }
 
-});
+}]);
