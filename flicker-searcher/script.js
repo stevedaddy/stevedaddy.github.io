@@ -4,15 +4,12 @@ angular.module('flickerSearcher', ['ngAnimate'])
   //delete $httpProvider.defaults.headers.common['X-Requested-With'];
 })
 .controller('inputCtrl', ['$scope', '$http', '$sce' ,function($scope, $http, $sce){
-  $scope.embedUrl = "http://www.youtube.com/embed/";
 
   $scope.trustSrc = function(src) {
   	  return $sce.trustAsResourceUrl(src);
   	};
 
 	$scope.searchFlicker = function(searcher) {
-
-  	$scope.searcher = searcher;
 
 	  var url = "https://api.flickr.com/services/rest";
 	  var request = {
@@ -22,6 +19,8 @@ angular.module('flickerSearcher', ['ngAnimate'])
       format: 'json',
       nojsoncallback: 1
 	  };
+
+//http.get() http.put()
 
 	  $http({
 		  method: 'GET',
