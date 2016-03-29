@@ -1,0 +1,29 @@
+<section id="meal-details">
+    <h2 class="section-head">Enter Meal Details</h2>
+    <div class="wrapper">
+        <form name="mealDetails" novalidate>
+            <label> Base Meal Price $
+                <input ng-model="baseMealPrice" name="baseMealPrice" type="number" placeholder="" required/>
+                <div ng-if="mealDetails.$submitted && mealDetails.baseMealPrice.$error.required" ng-messages="mealDetails.baseMealPrice.$error">
+                    <span class="error" ng-message="required">Field is required!</span>
+                </div>
+            </label>
+            <label> Tax Rate %
+                 <input ng-model="taxRate" name="taxRate" type="number" class="shorters" placeholder="" required/>
+                <div ng-if="mealDetails.$submitted && mealDetails.taxRate.$error.required" ng-messages="mealDetails.taxRate.$error">
+                    <span class="error" ng-message="required">Field is required!</span>
+                </div>
+            </label>
+            <label> Tip Percentage %
+                  <input ng-model="tipPercent" name="tipPercent" type="number" class="shorters" placeholder="" required/>
+                <div ng-if="mealDetails.$submitted && mealDetails.tipPercent.$error.required" ng-messages="mealDetails.tipPercent.$error">
+                    <span class="error" ng-message="required">Field is required!</span>
+                </div>
+            </label>
+            <div id="submittMealDetails">
+                <button type="submit" id="btnSubmit" value="Submit" ng-click="submitMealDetails()">Submit</button>
+                <button type="button" id="btnCancle" value="Cancle"  ng-click="formCancel()">Cancel</button>
+            <div>
+        </form>
+    </div>
+</section>

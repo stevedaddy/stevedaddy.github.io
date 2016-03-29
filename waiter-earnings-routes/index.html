@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="waiterEarnings">
+<head>
+    <title>My Waiter Earnings App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="//code.angularjs.org/1.3.10/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular-route.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular-animate.js"></script>
+    <script src="script.js"></script>
+</head>
+<body ng-class="{loading: isLoading}">
+<main role="main" ng-controller="inputCtrl">
+    <header>
+            <h1>Waitstaff Calculator</h1>
+            <a href="/waiter-earnings-routes/#/">Home</a> | <a href="/waiter-earnings-routes/#new-meal/">New Meal</a> | <a href="/waiter-earnings-routes/#my-earnings/">My Earnings</a><br><br>
+    </header>
+
+    <div class="animate-view-container">
+      <div ng-view class="animate-view"></div>
+    </div>
+
+</main>
+</body>
+</html>

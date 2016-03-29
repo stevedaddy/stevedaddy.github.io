@@ -1,0 +1,21 @@
+
+
+    <section id="customer-charges">
+        <h2 class="section-head">Customer Charges</h2>
+        <div class="wrapper">
+            <div class="returnValue">Subtotal: {{ customerSubTotal | currency: "$" : 2 || phtaxRatePrice }}</div>
+            <div class="returnValue totalLine">Tip: {{ customerTip | currency: "$" : 2|| phtaxRatePrice }}</div>
+            <div class="returnValue">Total: {{ customerTotal | currency: "$" : 2 || phtaxRatePrice }}</div>
+        </div>
+    </section>
+
+    <section id="my-earnings-info">
+        <h2 class="section-head">My Earnings Info</h2>
+        <div class="wrapper">
+            <div class="returnValue">Tip Total: {{ earningsTipTotal | currency: "$" : 2 || phtaxRatePrice }}</div>
+            <div class="returnValue mealCountpad">Meal Count: {{ earningsMealCount || '0' }}</div>
+            <div class="returnValue">Average Tip Per Meal: {{ earningsAvgTip | currency: "$" : 2 || phtaxRatePrice }}</div>
+        </div>
+
+    </section>
+    <button ng-click="formReset()" id="btnReset">Reset</button>
