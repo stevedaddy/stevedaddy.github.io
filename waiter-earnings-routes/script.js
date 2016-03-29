@@ -6,13 +6,13 @@ angular.module('waiterEarnings', ['ngRoute', 'ngAnimate'])
     }])
     .controller('inputCtrl', function($scope, $rootScope){
     //should I set these as constants?
-        $rootScope.phtaxRatePrice = 0;
-        $rootScope.customerSubTotal = 0;
-        $rootScope.customerTip = 0;
-        $rootScope.customerTotal = 0;
-        $rootScope.earningsTipTotalCount = 0;
-        $rootScope.earningsTipTotal = 0;
-        $rootScope.earningsAvgTip = 0;
+        $scope.phtaxRatePrice = 0;
+        $scope.customerSubTotal = 0;
+        $scope.customerTip = 0;
+        $scope.customerTotal = 0;
+        $scope.earningsTipTotalCount = 0;
+        $scope.earningsTipTotal = 0;
+        $scope.earningsAvgTip = 0;
 
 
     // is this logical for the percent?
@@ -30,42 +30,42 @@ angular.module('waiterEarnings', ['ngRoute', 'ngAnimate'])
         }
         $scope.formReset = function(clickEvent) {
             // Set back to pristine.
-            $rootScope.mealDetails.$setPristine();
+            $scope.mealDetails.$setPristine();
             // Since Angular 1.3, set back to untouched state.
-            $rootScope.mealDetails.$setUntouched();
-            $rootScope.baseMealPrice  = '';
-            $rootScope.taxRate = '';
-            $rootScope.tipPercent = '';
-            $rootScope.customerSubTotal = '';
-            $rootScope.customerTip =  '';
-            $rootScope.customerTotal = '';
-            $rootScope.earningsTipTotalCount = 0;
-            $rootScope.earningsTipTotal = 0;
-            $rootScope.earningsMealCount = 0;
-            $rootScope.earningsAvgTip = 0;
+            $scope.mealDetails.$setUntouched();
+            $scope.baseMealPrice  = '';
+            $scope.taxRate = '';
+            $scope.tipPercent = '';
+            $scope.customerSubTotal = '';
+            $scope.customerTip =  '';
+            $scope.customerTotal = '';
+            $scope.earningsTipTotalCount = 0;
+            $scope.earningsTipTotal = 0;
+            $scope.earningsMealCount = 0;
+            $scope.earningsAvgTip = 0;
         }
         $scope.submitMealDetails = function(){
-            $rootScope.taxRateRound = roundedPercentage($rootScope.taxRate);
-            $rootScope.tipPercentRound = roundedPercentage($rootScope.tipPercent);
+            $scope.taxRateRound = roundedPercentage($scope.taxRate);
+            $scope.tipPercentRound = roundedPercentage($scope.tipPercent);
 
             if ($scope.mealDetails.$valid) {
               //  console.log($scope.earningsTipTotal + ' by ' + $scope.earningsMealCount);
-                $rootScope.customerSubTotal = $scope.baseMealPrice + ($rootScope.taxRateRound * $rootScope.baseMealPrice);
-                $rootScope.customerTip = $rootScope.customerSubTotal * $rootScope.tipPercentRound;
-                $rootScope.customerTotal = ($rootScope.customerSubTotal) + ($rootScope.customerTip) * $rootScope.tipPercentRound;
-                //  $rootScope.customerTotal = $filter('currency')($rootScope.customerTotal);
+                $rootScope.customerSubTotal = $scope.baseMealPrice + ($scope.taxRateRound * $scope.baseMealPrice);
+                $rootScope.customerTip = $scope.customerSubTotal * $scope.tipPercentRound;
+                $rootScope.customerTotal = ($scope.customerSubTotal) + ($scope.customerTip) * $scope.tipPercentRound;
+                //  $scope.customerTotal = $filter('currency')($scope.customerTotal);
 
-                if (typeof $rootScope.earningsMealCount != 'undefined') {
-                    $rootScope.earningsTipTotal = $scope.customerTip + $rootScope.earningsTipTotal;
-                    $rootScope.earningsMealCount = $rootScope.earningsMealCount + 1;
+                if (typeof $scope.earningsMealCount != 'undefined') {
+                    $scope.earningsTipTotal = $scope.customerTip + $scope.earningsTipTotal;
+                    $scope.earningsMealCount = $scope.earningsMealCount + 1;
                 //  console.log($scope.earningsTipTotal + ' by ' + $scope.earningsMealCount);
-                    $rootScope.earningsAvgTip = $rootScope.earningsTipTotal / $rootScope.earningsMealCount;
+                    $scope.earningsAvgTip = $scope.earningsTipTotal / $scope.earningsMealCount;
                 }
                 else {
-                    $rootScope.earningsMealCount = 1;
-                    $rootScope.earningsTipTotalCount = 0;
-                    $rootScope.earningsTipTotal = $rootScope.earningsTipTotal + $rootScope.earningsTipTotalCount;
-                    $rootScope.earningsAvgTip = $rootScope.earningsAvgTip;
+                    $scope.earningsMealCount = 1;
+                    $scope.earningsTipTotalCount = 0;
+                    $scope.earningsTipTotal = $scope.earningsTipTotal + $scope.earningsTipTotalCount;
+                    $scope.earningsAvgTip = $scope.earningsAvgTip;
                 }
             }
         }
