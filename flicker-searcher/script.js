@@ -3,7 +3,7 @@ angular.module('flickerSearcher', ['ngAnimate'])
 	$httpProvider.defaults.useXDomain = true;
   //delete $httpProvider.defaults.headers.common['X-Requested-With'];
 })
-.controller('inputCtrl', ['$scope', '$http', '$sce' ,function($scope, $http, $sce){
+.controller('inputCtrl', ['$scope', '$http', '$sce', function($scope, $http, $sce){
 
   $scope.trustSrc = function(src) {
   	  return $sce.trustAsResourceUrl(src);

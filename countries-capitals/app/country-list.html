@@ -1,2 +1,8 @@
-country list<br>
+<section ng-controller="countryCtrl">
+    <div ng-repeat="result in results">
+        {{ result.continent }}<br>
+        {{ result.countryName }}
+        <img ng-src="http://www.geonames.org/flags/x/{{ result.countryCode | lowercase }}.gif" />
+    </div>
+</section>
 <a ui-sref="home">Home</a>
