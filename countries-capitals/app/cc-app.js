@@ -3,16 +3,17 @@ ccApp.config(function($stateProvider, $urlRouterProvider){
 
     // For any unmatched url, send to home
     $urlRouterProvider.otherwise("/");
+
     $stateProvider
         .state('home', {
             url: "/",
             templateUrl: "home.html"
         })
-        .state('countryList', {
+        .state('countries', {
             url: "/countries",
             templateUrl: "country-list.html"
         })
-        .state('countryDetail', {
+        .state('country', {
             url: "/countries/:country",
             templateUrl: "country-detail.html",
             controller: function($scope, $stateParams){
@@ -23,7 +24,7 @@ ccApp.config(function($stateProvider, $urlRouterProvider){
                     return $stateParams.country;
                 }]}
         })
-        .state('countryDetail.capital', {
+        .state('country.capital', {
             url: "/capital",
             templateUrl: "country-detail.html",
             controller: function($scope, $stateParams, country){
