@@ -1,0 +1,16 @@
+{
+  "name": "countries-capitals",
+  "homepage": "https://github.com/stevedaddy/stevedaddy.github.io",
+  "authors": [
+    "Steve T <stevethewebguy@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "angular-ui-router": "^0.2.18"
+  }
+}
