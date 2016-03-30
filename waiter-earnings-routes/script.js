@@ -4,73 +4,59 @@ angular.module('waiterEarnings', ['ngRoute', 'ngAnimate'])
             return $filter('number')(input*100, decimals)+'%';
         };
     }])
+
     .controller('inputCtrl', function($scope, $rootScope){
-    //should I set these as constants?
-        $scope.phtaxRatePrice = 0;
+
         $scope.customerSubTotal = 0;
         $scope.customerTip = 0;
         $scope.customerTotal = 0;
         $scope.earningsTipTotalCount = 0;
         $scope.earningsTipTotal = 0;
         $scope.earningsAvgTip = 0;
+        //if tipArray exsists, leave it be, if not set it
+        $rootScope.tipArray = ( typeof $rootScope.tipArray != 'undefined' && $rootScope.tipArray instanceof Array ) ? $rootScope.tipArray : [];
 
-
-    // is this logical for the percent?
+        // is this logical for the percent?
         roundedPercentage = function(myValue){
             return myValue * .01;
         }
         $scope.formCancel = function(clickEvent) {
-            // Set back to pristine.
             $scope.mealDetails.$setPristine();
-            // Since Angular 1.3, set back to untouched state.
             $scope.mealDetails.$setUntouched();
             $scope.baseMealPrice  = '';
             $scope.taxRate = '';
             $scope.tipPercent = '';
         }
-        $scope.formReset = function(clickEvent) {
-            // Set back to pristine.
-            $scope.mealDetails.$setPristine();
-            // Since Angular 1.3, set back to untouched state.
-            $scope.mealDetails.$setUntouched();
-            $scope.baseMealPrice  = '';
-            $scope.taxRate = '';
-            $scope.tipPercent = '';
-            $scope.customerSubTotal = '';
-            $scope.customerTip =  '';
-            $scope.customerTotal = '';
-            $scope.earningsTipTotalCount = 0;
-            $scope.earningsTipTotal = 0;
-            $scope.earningsMealCount = 0;
-            $scope.earningsAvgTip = 0;
-        }
+
         $scope.submitMealDetails = function(){
             $scope.taxRateRound = roundedPercentage($scope.taxRate);
             $scope.tipPercentRound = roundedPercentage($scope.tipPercent);
 
             if ($scope.mealDetails.$valid) {
-              //  console.log($scope.earningsTipTotal + ' by ' + $scope.earningsMealCount);
-                $rootScope.customerSubTotal = $scope.baseMealPrice + ($scope.taxRateRound * $scope.baseMealPrice);
-                $rootScope.customerTip = $scope.customerSubTotal * $scope.tipPercentRound;
-                $rootScope.customerTotal = ($scope.customerSubTotal) + ($scope.customerTip) * $scope.tipPercentRound;
-                //  $scope.customerTotal = $filter('currency')($scope.customerTotal);
-
-                if (typeof $scope.earningsMealCount != 'undefined') {
-                    $scope.earningsTipTotal = $scope.customerTip + $scope.earningsTipTotal;
-                    $scope.earningsMealCount = $scope.earningsMealCount + 1;
-                //  console.log($scope.earningsTipTotal + ' by ' + $scope.earningsMealCount);
-                    $scope.earningsAvgTip = $scope.earningsTipTotal / $scope.earningsMealCount;
-                }
-                else {
-                    $scope.earningsMealCount = 1;
-                    $scope.earningsTipTotalCount = 0;
-                    $scope.earningsTipTotal = $scope.earningsTipTotal + $scope.earningsTipTotalCount;
-                    $scope.earningsAvgTip = $scope.earningsAvgTip;
-                }
+                $scope.customerSubTotal = $scope.baseMealPrice + ($scope.taxRateRound * $scope.baseMealPrice);
+                $scope.customerTip = $scope.customerSubTotal * $scope.tipPercentRound;
+                $scope.customerTotal = ($scope.customerSubTotal) + ($scope.customerTip) * $scope.tipPercentRound;
+                $rootScope.tipArray.push($scope.customerTip);
             }
         }
     })
+    .controller('myEarnings', function($scope, $rootScope){
+      $scope.phtaxRatePrice = 0;
+      myTotal = 0;
+      for(var i = 0, len = $rootScope.tipArray.length; i < len; i++) {
+          myTotal += $rootScope.tipArray[i];
+      }
+     $scope.earningsTipTotal = myTotal;
+     $scope.earningsMealCount = $rootScope.tipArray.length;
+     $scope.earningsAvgTip = $scope.earningsTipTotal / $scope.earningsMealCount;
 
+     $scope.formReset = function(clickEvent) {
+         $rootScope.tipArray = [];
+         $scope.earningsTipTotal = 0;
+         $scope.earningsMealCount = 0;
+         $scope.earningsAvgTip = 0;
+     }
+    })
     .config(function($routeProvider) {
           $routeProvider.when('/', {
             templateUrl : 'home.html',
@@ -80,7 +66,7 @@ angular.module('waiterEarnings', ['ngRoute', 'ngAnimate'])
             controller : 'inputCtrl'
           }).when('/my-earnings/', {
             templateUrl : 'my-earnings.html',
-            controller : 'inputCtrl'
+            controller : 'myEarnings'
           }).when('/error', {
     		    template : 'Error Page Not Found'
     	    })

@@ -29,7 +29,7 @@
 </section>
 <section id="customer-charges">
     <h2 class="section-head">Customer Charges</h2>
-    <div class="wrapper">
+    <div class="wrapper"><!--  $root.customerSubTotal -->
         <div class="returnValue">Subtotal: {{ customerSubTotal | currency: "$" : 2 || phtaxRatePrice }}</div>
         <div class="returnValue totalLine">Tip: {{ customerTip | currency: "$" : 2|| phtaxRatePrice }}</div>
         <div class="returnValue">Total: {{ customerTotal | currency: "$" : 2 || phtaxRatePrice }}</div>
