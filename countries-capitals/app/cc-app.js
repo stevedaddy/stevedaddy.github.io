@@ -20,21 +20,11 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             templateUrl: "country-detail.html",
             controller: function($scope, $stateParams){
                 $scope.country = $stateParams.country;
-                //$scope.name = $stateParams.name;
-                //$scope.toponymName = $stateParams.toponymName;
-                //$scope.countryName = $stateParams.countryName;
-                //$scope.adminName1 = $stateParams.adminName1;
-                //$scope.adminCode1 = $stateParams.adminCode1;
-                //$scope.fcodeName = $stateParams.fcodeName;
+
             },
             resolve:{
                 country: ['$stateParams', function($stateParams){
                     return $stateParams.country;
-                    //return $stateParams.toponymName;
-                    //return $stateParams.countryName;
-                    //return $stateParams.adminName1;
-                    //return $stateParams.adminCode1;
-                    //return $stateParams.fcodeName;
                 }]}
         })
         .state('country.capital', {
@@ -83,15 +73,40 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
 }])
 .controller('countryDetailCtrl', ['$scope', '$http', function($scope, $http, country){
 
+        $scope.searchThisCountryInfo = function() {
+            var url = "http://api.geonames.org/countryInfo";
+            var request = {
+                username: 'stzy',
+                type: 'JSON',
+                country: $scope.country
+            };
+            $http({
+                method: 'GET',
+                url: url,
+                params: request,
+                cache: true
+            })
+                .then(function (response) {
+                    $scope.results3 = response.data.geonames;
+                    $scope.countryName = $scope.results3[0]['countryName'];
+                    $scope.population = $scope.results3[0]['population'];
+                    $scope.areaInSqKm = $scope.results3[0]['areaInSqKm'];
+                    $scope.capital = $scope.results3[0]['capital'];
+                  //  console.log(response.data.geonames);
+                },
+                function (response) {
+                    alert('error');
+                });
+        }
+
         $scope.searchCapitals = function() {
             var url = "http://api.geonames.org/search";
             var request = {
                 username: 'stzy',
                 type: 'JSON',
+                name_equals :  $scope.capital,
                 q : 'capital',
                 country: $scope.country,
-              //  fcodeName: 'capital of a political entity',
-                //name_equals: 'Washington',
                 isNameRequired : 1,
                 maxRows : 1
             };
@@ -104,6 +119,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                 .then(function (response) {
                     $scope.results = response.data.geonames;
                     $scope.capPopulation = $scope.results[0]['population'];
+                    $scope.capName = $scope.results[0]['name'];
                    //console.log(response.data.geonames);
                 },
                 function (response) {
@@ -128,14 +144,14 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                 .then(function (response) {
                     $scope.searchResults = response.data.geonames;
                     $scope.howMany = $scope.searchResults.length;
-                    console.log(response.data.geonames);
+                  //  console.log(response.data.geonames);
 
                 },
                 function (response) {
                     alert('error');
                 });
         }
-
+        $scope.searchThisCountryInfo();
         $scope.searchCapitals();
         $scope.searchNeighbors();
 
