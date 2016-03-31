@@ -1,2 +1,5 @@
 {{ country }} detail<br>
+        <div ng-controller="countryDetailCtrl">
+<img ng-src="http://www.geonames.org/flags/x/{{ result.countryCode | lowercase }}.gif" />
 <a ui-sref="home">Home</a> | <a ui-sref="countries">Browse Countries</a>
+            </div>

@@ -35,7 +35,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         });
 })
 
-.controller('countryCtrl', ['$scope', '$http', '$sce', '$cacheFactory', function($scope, $http, $sce, $cacheFactory){
+.controller('countryCtrl', ['$scope', '$http', '$sce', '$location', function($scope, $http, $sce, $location){
     $scope.trustSrc = function(src) {
     return $sce.trustAsResourceUrl(src);
     }
@@ -55,7 +55,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                 //  var httpCache = $cacheFactory.get('$http');
                 // console.log( response.data.geonames);
                 $scope.results = response.data.geonames;
-                // console.log(data);
+                //console.log($scope.results[0]);
             },
             function (response) {
                 alert('error');
@@ -65,7 +65,15 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
     if(!$scope.results) {
         $scope.importCountries();
     }
-}]);
 
+    $scope.goToDetail = function(cCode) {
+        $location.url('/countries/' + cCode.countryCode +'/capital');
+    };
+}])
+.controller('countryDetailCtrl', ['$scope', '$http', function($scope, $http){
+
+
+
+}]);
 
 
