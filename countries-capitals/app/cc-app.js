@@ -34,37 +34,38 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             }
         });
 })
-.controller('countryCtrl', ['$scope', '$http', '$sce', function($scope, $http, $sce){
 
-        $scope.trustSrc = function(src) {
-            return $sce.trustAsResourceUrl(src);
+.controller('countryCtrl', ['$scope', '$http', '$sce', '$cacheFactory', function($scope, $http, $sce, $cacheFactory){
+    $scope.trustSrc = function(src) {
+    return $sce.trustAsResourceUrl(src);
+    }
+    $scope.importCountries = function() {
+        var url = "http://api.geonames.org/countryInfo";
+        var request = {
+            username: 'stzy',
+            type: 'JSON'
         };
-
-        $scope.getCountries = function() {
-
-            var url = "http://api.geonames.org/countryInfo";
-            var request = {
-                username : 'stzy',
-                type : 'JSON'
-            };
-            $http({
-                method: 'GET',
-                url: url,
-                params: request,
-                cache: true
-            })
-                .then(function (response) {
-                  //  var httpCache = $cacheFactory.get('$http');
-                   console.log( response.data.geonames);
-                   $scope.results = response.data.geonames;
-                   // console.log($scope.results);
-                },
-                function (response) {
-                    alert('error');
-                });
-          }
-        $scope.getCountries();
-        }]);
+        $http({
+            method: 'GET',
+            url: url,
+            params: request,
+            cache: true
+        })
+            .then(function (response) {
+                //  var httpCache = $cacheFactory.get('$http');
+                // console.log( response.data.geonames);
+                $scope.results = response.data.geonames;
+                // console.log(data);
+            },
+            function (response) {
+                alert('error');
+            });
+    }
+    //if no results run the api call
+    if(!$scope.results) {
+        $scope.importCountries();
+    }
+}]);
 
 
 
