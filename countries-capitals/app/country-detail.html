@@ -11,7 +11,8 @@
                     <a ui-sref="country.capital({ country: result.countryCode })">{{ result.countryName }}</a><span ng-if="!$last">, </span>
                 </span>
             </div>
-    <img ng-src="http://www.geonames.org/flags/x/{{ country | lowercase }}.gif" />
-    <img ng-src="http://www.geonames.org/img/country/250/{{ country }}.png" />
+    <img ng-src="http://www.geonames.org/flags/x/{{ country | lowercase }}.gif" class="map-img" />
+    <img ng-src="http://www.geonames.org/img/country/250/{{ country }}.png" class="flag-img" />
+    <div class="clear"></div>
     <a ui-sref="home">Home</a> | <a ui-sref="countries">Browse Countries</a>
 </div>

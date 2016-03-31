@@ -1,17 +1,19 @@
-<table ng-controller="countryCtrl" class="table-list-countries">
-    <th>Name</th>
-    <th>Country Code</th>
-    <th>Capital</th>
-    <th>Area in 2km</th>
-    <th>Population</th>
-    <th>Continent</th>
-    <tr ng-repeat="result in results" ng-click="goToDetail(result)">
-        <td>{{ result.countryName }}</td>
-        <td>{{ result.countryCode }}</td>
-        <td>{{ result.capital }}</td>
-        <td>{{ result.areaInSqKm |number }}</td>
-        <td>{{ result.population |number }}</td>
-        <td>{{ result.continent }}</td>
-    </tr>
-</table>
+<section class="table-list-countries-wrap">
+    <table ng-controller="countryCtrl" class="table-list-countries">
+        <th>Name</th>
+        <th>Country Code</th>
+        <th>Capital</th>
+        <th>Area in 2km</th>
+        <th>Population</th>
+        <th>Continent</th>
+        <tr ng-repeat="result in results" ng-click="goToDetail(result)">
+            <td>{{ result.countryName }}</td>
+            <td>{{ result.countryCode }}</td>
+            <td>{{ result.capital }}</td>
+            <td>{{ result.areaInSqKm |number }}</td>
+            <td>{{ result.population |number }}</td>
+            <td>{{ result.continent }}</td>
+        </tr>
+    </table>
+</section>
 <a ui-sref="home">Home</a>
