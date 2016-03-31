@@ -34,9 +34,38 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                 $scope.country = country;
             }
         });
-})
 
-.controller('countryCtrl', ['$scope', '$http', '$sce', '$location', function($scope, $http, $sce, $location){
+})
+    .directive('loadingState', function ($rootScope) {
+        var loadingStates = {};
+
+        $rootScope.$on('$stateChangeStart', function (event, toState) {
+            loadingStates[toState.name] = true;
+        });
+
+        ['$stateChangeSuccess', '$stateChangeError', '$stateNotFound'].forEach(function (eventType) {
+            $rootScope.$on(eventType, function (event, toState) {
+                delete loadingStates[toState.name];
+            });
+        });
+
+        return {
+            template: '<div ng-show="loading[state]" ng-transclude></div>',
+            transclude: true,
+            scope: {
+                state: '@loadingState'
+            },
+            controller: function ($scope) {
+                $scope.loading = loadingStates;
+            }
+        };
+    })
+.controller('countryCtrl', ['$scope', '$http', '$sce', '$location', function($scope, $http, $sce, $location, loadingState){
+
+
+
+
+
     $scope.trustSrc = function(src) {
     return $sce.trustAsResourceUrl(src);
     }
@@ -45,7 +74,8 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         var request = {
             username: 'stzy',
             type: 'JSON'
-        };
+        }
+        $scope.loading = true;
         $http({
             method: 'GET',
             url: url,
@@ -60,6 +90,10 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             },
             function (response) {
                 alert('error');
+            })
+            .finally(function () {
+                // Hide loading spinner whether our call succeeded or failed.
+                $scope.loading = false;
             });
     }
     //if no results run the api call
@@ -92,7 +126,10 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                     $scope.population = $scope.results3[0]['population'];
                     $scope.areaInSqKm = $scope.results3[0]['areaInSqKm'];
                     $scope.capital = $scope.results3[0]['capital'];
-                  //  console.log(response.data.geonames);
+                    $scope.continent = $scope.results3[0]['continent'];
+
+                  //  continent, timezone
+                    console.log(response.data.geonames);
                 },
                 function (response) {
                     alert('error');
