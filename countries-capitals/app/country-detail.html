@@ -1,18 +1,27 @@
-<div ng-controller="countryDetailCtrl">
-    <h1>{{ countryName }}</h1>
-    Population of Country: {{ population }}<br>
-    Area: {{ areaInSqKm | number }}<br>
-    Continent: {{ continent }}<br>
-    Capital: {{ capName }}<br>
-         Capital Population:   {{ capPopulation | number}}<br>
-            <div ng-if="searchResults.length > 0">
-            {{ howMany }} Neighbors:
-                <span ng-repeat="result in searchResults">
-                    <a ui-sref="country.capital({ country: result.countryCode })">{{ result.countryName }}</a><span ng-if="!$last">, </span>
-                </span>
-            </div>
-    <img ng-src="http://www.geonames.org/flags/x/{{ country | lowercase }}.gif" class="map-img" />
-    <img ng-src="http://www.geonames.org/img/country/250/{{ country }}.png" class="flag-img" />
-    <div class="clear"></div>
-    <a ui-sref="home">Home</a> | <a ui-sref="countries">Browse Countries</a>
-</div>
+<section class="detail-view">
+    <div ng-controller="countryDetailCtrl">
+        <!--antiartica does not have all these values-->
+        <h1>{{ countryName || 'No Data' }}</h1>
+        Population of Country: {{ (population | number) || 'No Data' }}<br>
+        Area: {{ (areaInSqKm | number) || 'No Data' }} sq km<br>
+        Continent: {{ continent || 'No Data' }}<br>
+        Capital: {{ capName || 'No Data' }}<br>
+        Capital Population: {{ (capPopulation | number) || 'No Data' }}<br>
+
+        <div ng-if="searchResults.length > 0">
+            {{ howMany }} Neighbor<span ng-if="searchResults.length > 1">s</span>:
+                    <span ng-repeat="result in searchResults">
+                        <a ui-sref="country.capital({ country: result.countryCode })">{{ result.countryName }}</a><span
+                            ng-if="!$last">, </span>
+                    </span>
+        </div>
+        <br><br><br>
+
+        <div>
+            <img ng-src="http://www.geonames.org/flags/x/{{ country | lowercase }}.gif" class="map-img"/>
+            <img ng-src="http://www.geonames.org/img/country/250/{{ country }}.png" class="flag-img"/>
+        </div>
+        <div class="clear"></div>
+        <nav class="bottom-nav"><a ui-sref="home">Home</a> <a ui-sref="countries">Browse Countries</a></nav>
+    </div>
+</section>

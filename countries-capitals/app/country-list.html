@@ -9,11 +9,11 @@
         <tr ng-repeat="result in results" ng-click="goToDetail(result)">
             <td>{{ result.countryName }}</td>
             <td>{{ result.countryCode }}</td>
-            <td>{{ result.capital }}</td>
-            <td>{{ result.areaInSqKm |number }}</td>
-            <td>{{ result.population |number }}</td>
+            <td>{{ result.capital || 'No Data' }}</td>
+            <td>{{ result.areaInSqKm | number }}</td>
+            <td>{{ result.population | number }}</td>
             <td>{{ result.continent }}</td>
         </tr>
     </table>
 </section>
-<a ui-sref="home">Home</a>
+<nav class="bottom-nav"><a ui-sref="home">Home</a></nav>

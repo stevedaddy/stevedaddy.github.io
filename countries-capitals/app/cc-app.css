@@ -6,16 +6,50 @@ body, html {
     font-family: "Roboto", sans-serif;
 }
 main{
+    margin: 0 auto;
+}
+.home-view, .detail-view{
     max-width: 650px;
     margin: 0 auto;
 }
+
 .table-list-countries-wrap{
     max-height: 400px;
     overflow: auto;
+    margin: 0 20px;
+    border: 1px solid #000;
 }
+.table-list-countries{
+    border: 0;
+    border-collapse: collapse;
+    width: 100%;
+    white-space: nowrap;
+}
+
 .table-list-countries tr{
     cursor: pointer;
 }
+
+.table-list-countries th{
+    background: #000;
+    color: #FFF;
+    cursor: default;
+    padding: 5px 5px 5px 8px;
+    margin: 0;
+    font-size: 12px;
+    text-align: left;
+    border: 0px;
+    white-space: nowrap;
+}
+.table-list-countries td{
+    padding: 8px 6px;
+    border-right: 1px solid #000;
+}
+.table-list-countries td:last-of-type {
+    border-right: 0px!important;
+}
+.table-list-countries tr:nth-child(even) {background: #CCC}
+.table-list-countries tr:nth-child(odd) {background: #FFF}
 .table-list-countries tr:hover{
     background: lightblue;
 }
@@ -25,15 +59,34 @@ main{
     padding: 0 0 20px;
 }
 .map-img{
-    width: 50%;
+    max-width: 50%;
     float: right;
 }
 .flag-img{
     float: left;
-    width: 45%;
+    max-width: 45%;
 }
 .clear{
     clear:both;
+}
+.bottom-nav{
+    margin: 40px auto 30px;
+    display: table;
+}
+.bottom-nav a{
+    display: block;
+    float: left;
+    padding: 3px 10px;
+    margin: 0 5px 0 0;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 1s;
+    font-size: 14px;
+}
+.bottom-nav a:hover{
+    background: lightblue;
 }
 .loading {
     position:relative;

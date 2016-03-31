@@ -61,11 +61,6 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         };
     })
 .controller('countryCtrl', ['$scope', '$http', '$sce', '$location', function($scope, $http, $sce, $location, loadingState){
-
-
-
-
-
     $scope.trustSrc = function(src) {
     return $sce.trustAsResourceUrl(src);
     }
@@ -83,10 +78,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             cache: true
         })
             .then(function (response) {
-                //  var httpCache = $cacheFactory.get('$http');
-                // console.log( response.data.geonames);
                 $scope.results = response.data.geonames;
-                //console.log($scope.results[0]);
             },
             function (response) {
                 alert('error');
@@ -129,7 +121,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                     $scope.continent = $scope.results3[0]['continent'];
 
                   //  continent, timezone
-                    console.log(response.data.geonames);
+                   // console.log(response.data.geonames);
                 },
                 function (response) {
                     alert('error');
@@ -155,9 +147,15 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             })
                 .then(function (response) {
                     $scope.results = response.data.geonames;
-                    $scope.capPopulation = $scope.results[0]['population'];
-                    $scope.capName = $scope.results[0]['name'];
-                   //console.log(response.data.geonames);
+                    //console.log(response);
+                    if($scope.results[0]) {
+                        $scope.capPopulation = $scope.results[0]['population'];
+                        $scope.capName = $scope.results[0]['name'];
+                    }
+                    else{
+                        $scope.capPopulation = 'No Data';
+                        $scope.capName = 'No Data';
+                    }
                 },
                 function (response) {
                     alert('error');
@@ -179,9 +177,13 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                 cache: true
             })
                 .then(function (response) {
-                    $scope.searchResults = response.data.geonames;
-                    $scope.howMany = $scope.searchResults.length;
-                  //  console.log(response.data.geonames);
+                    if(response.data.geonames) {
+                        $scope.searchResults = response.data.geonames;
+                        $scope.howMany = $scope.searchResults.length;
+                    }
+                    else{
+                        $scope.howMany = 0;
+                    }
 
                 },
                 function (response) {
