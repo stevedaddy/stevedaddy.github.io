@@ -1,5 +1,6 @@
-
+//angular.module('route-change-loader', []);
 angular.module('ccApp', ['ui.router', 'ngAnimate'])
+
     .filter('kms', ['$filter', function($filter) {
         return function(input) {
             // This if fixes that it was displaying 'undefined' until it loaded a value,
@@ -9,7 +10,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             }
         };
     }])
-.config(function($stateProvider, $urlRouterProvider, $httpProvider){
+.config(['$urlRouterProvider', '$httpProvider', '$stateProvider', function($urlRouterProvider, $httpProvider, $stateProvider){
     $httpProvider.defaults.useXDomain = true;
 
     // For any unmatched url, send to home
@@ -43,8 +44,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                 $scope.country = country;
             }
         });
-
-})
+}])
     .directive('loadingState', function ($rootScope) {
         var loadingStates = {};
 
@@ -204,5 +204,3 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         $scope.searchNeighbors();
 
 }]);
-
-
