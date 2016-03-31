@@ -20,10 +20,21 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             templateUrl: "country-detail.html",
             controller: function($scope, $stateParams){
                 $scope.country = $stateParams.country;
+                //$scope.name = $stateParams.name;
+                //$scope.toponymName = $stateParams.toponymName;
+                //$scope.countryName = $stateParams.countryName;
+                //$scope.adminName1 = $stateParams.adminName1;
+                //$scope.adminCode1 = $stateParams.adminCode1;
+                //$scope.fcodeName = $stateParams.fcodeName;
             },
             resolve:{
                 country: ['$stateParams', function($stateParams){
                     return $stateParams.country;
+                    //return $stateParams.toponymName;
+                    //return $stateParams.countryName;
+                    //return $stateParams.adminName1;
+                    //return $stateParams.adminCode1;
+                    //return $stateParams.fcodeName;
                 }]}
         })
         .state('country.capital', {
@@ -70,9 +81,63 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         $location.url('/countries/' + cCode.countryCode +'/capital');
     };
 }])
-.controller('countryDetailCtrl', ['$scope', '$http', function($scope, $http){
+.controller('countryDetailCtrl', ['$scope', '$http', function($scope, $http, country){
+
+        $scope.searchCapitals = function() {
+            var url = "http://api.geonames.org/search";
+            var request = {
+                username: 'stzy',
+                type: 'JSON',
+                q : 'capital',
+                country: $scope.country,
+              //  fcodeName: 'capital of a political entity',
+                //name_equals: 'Washington',
+                isNameRequired : 1,
+                maxRows : 1
+            };
+            $http({
+                method: 'GET',
+                url: url,
+                params: request,
+                cache: true
+            })
+                .then(function (response) {
+                    $scope.results = response.data.geonames;
+                    $scope.capPopulation = $scope.results[0]['population'];
+                   //console.log(response.data.geonames);
+                },
+                function (response) {
+                    alert('error');
+                });
+        }
 
 
+        $scope.searchNeighbors = function() {
+            var url = "http://api.geonames.org/neighboursJSON";
+            var request = {
+                username: 'stzy',
+                type: 'JSON',
+                country: $scope.country
+            };
+            $http({
+                method: 'GET',
+                url: url,
+                params: request,
+                cache: true
+            })
+                .then(function (response) {
+                    $scope.searchResults = response.data.geonames;
+                    $scope.howMany = $scope.searchResults.length;
+                    console.log(response.data.geonames);
+
+                },
+                function (response) {
+                    alert('error');
+                });
+        }
+
+        $scope.searchCapitals();
+        $scope.searchNeighbors();
 
 }]);
 

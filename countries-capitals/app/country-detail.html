@@ -1,5 +1,13 @@
-{{ country }} detail<br>
-        <div ng-controller="countryDetailCtrl">
-<img ng-src="http://www.geonames.org/flags/x/{{ result.countryCode | lowercase }}.gif" />
+<div ng-controller="countryDetailCtrl">
+    <h1>{{ country }}</h1>
+         Capital Population:   {{ capPopulation }}<br>
+            <div ng-if="searchResults">
+            {{ howMany }} Neighbors:
+                <span ng-repeat="result in searchResults">
+                    <a ui-sref="country.capital({ country: result.countryCode })">{{ result.countryName }}</a><span ng-if="!$last">, </span>
+                </span>
+            </div>
+    <img ng-src="http://www.geonames.org/flags/x/{{ country | lowercase }}.gif" />
+    <img ng-src="http://www.geonames.org/img/country/250/{{ country }}.png" />
 <a ui-sref="home">Home</a> | <a ui-sref="countries">Browse Countries</a>
             </div>
