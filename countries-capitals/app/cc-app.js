@@ -1,5 +1,14 @@
 
 angular.module('ccApp', ['ui.router', 'ngAnimate'])
+    .filter('kms', ['$filter', function($filter) {
+        return function(input) {
+            // This if fixes that it was displaying 'undefined' until it loaded a value,
+            // instead of using it's placeholder 'No Data' from the template
+            if (input) {
+                return $filter('number')(input) + ' sq km';
+            }
+        };
+    }])
 .config(function($stateProvider, $urlRouterProvider, $httpProvider){
     $httpProvider.defaults.useXDomain = true;
 

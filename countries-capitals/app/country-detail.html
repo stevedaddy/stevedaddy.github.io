@@ -3,7 +3,7 @@
         <!--antiartica does not have all these values-->
         <h1>{{ countryName || 'No Data' }}</h1>
         Population of Country: {{ (population | number) || 'No Data' }}<br>
-        Area: {{ (areaInSqKm | number) || 'No Data' }} sq km<br>
+        Area: {{ (areaInSqKm | kms ) || 'No Data' }}<br>
         Continent: {{ continent || 'No Data' }}<br>
         Capital: {{ capName || 'No Data' }}<br>
         Capital Population: {{ (capPopulation | number) || 'No Data' }}<br>
