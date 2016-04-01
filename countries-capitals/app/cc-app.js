@@ -1,6 +1,4 @@
-//angular.module('route-change-loader', []);
 angular.module('ccApp', ['ui.router', 'ngAnimate'])
-
     .filter('kms', ['$filter', function($filter) {
         return function(input) {
             // This if fixes that it was displaying 'undefined' until it loaded a value,
@@ -10,13 +8,24 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             }
         };
     }])
+
+//change these to plachold1, placehold2, and use 'gulp build' for all develop/deploy?
 .config(['$urlRouterProvider', '$httpProvider', '$stateProvider', function($urlRouterProvider, $httpProvider, $stateProvider){
+
+        var slowResolve = function(countriesDataLoad){
+            return countriesDataLoad.searchThisCountryInfo();
+        }
+        slowResolve.$inject = ['countriesDataLoad'];
+
+
+
     $httpProvider.defaults.useXDomain = true;
 
     // For any unmatched url, send to home
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
+
         .state('home', {
             url: "/",
             templateUrl: "home.html"
@@ -25,6 +34,8 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             url: "/countries",
             templateUrl: "country-list.html"
         })
+
+        //is this how you have to do it? id rather not have to call county and pass along stuff to the child
         .state('country', {
             url: "/countries/:country",
             templateUrl: "country-detail.html",
@@ -42,8 +53,13 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             templateUrl: "country-detail.html",
             controller: function($scope, $stateParams, country){
                 $scope.country = country;
-            }
+
+            },
+            // use an object that encapsulates this instead
+            countryListing: slowResolve
+
         });
+
 }])
     .directive('loadingState', function ($rootScope) {
         var loadingStates = {};
@@ -88,6 +104,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         })
             .then(function (response) {
                 $scope.results = response.data.geonames;
+                console.log($scope.results);
             },
             function (response) {
                 alert('error');
@@ -106,7 +123,9 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         $location.url('/countries/' + cCode.countryCode +'/capital');
     };
 }])
-.controller('countryDetailCtrl', ['$scope', '$http', function($scope, $http, country){
+.controller('countryDetailCtrl', ['$scope', '$http', function($scope, $http, country, countriesLoad){
+
+
 
         $scope.searchThisCountryInfo = function() {
             var url = "http://api.geonames.org/countryInfo";
@@ -203,4 +222,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         $scope.searchCapitals();
         $scope.searchNeighbors();
 
+
 }]);
+
+
