@@ -37,27 +37,15 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
 
         //is this how you have to do it? id rather not have to call county and pass along stuff to the child
         .state('country', {
-            url: "/countries/:country",
+            url: "/countries/:country/capital",
             templateUrl: "country-detail.html",
-            controller: function($scope, $stateParams){
-                $scope.country = $stateParams.country;
-
+            controller: 'countryDetailCtrl',
+            resolve: {
+                neighbors: function(api, $stateParams){
+                    return api.searchNeighbors($stateParams.country);
+                }
             },
-            resolve:{
-                country: ['$stateParams', function($stateParams){
-                    return $stateParams.country;
-                }]}
-        })
-        .state('country.capital', {
-            url: "/capital",
-            templateUrl: "country-detail.html",
-            controller: function($scope, $stateParams, country){
-                $scope.country = country;
-
-            },
-            // use an object that encapsulates this instead
-            countryListing: slowResolve
-
+            
         });
 
 }])
@@ -85,7 +73,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             }
         };
     })
-.controller('countryCtrl', ['$scope', '$http', '$sce', '$location', function($scope, $http, $sce, $location, loadingState){
+.controller('countryCtrl', ['$scope', '$http', '$sce', '$state', function($scope, $http, $sce, $location, loadingState){
     $scope.trustSrc = function(src) {
     return $sce.trustAsResourceUrl(src);
     }
@@ -120,12 +108,10 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
     }
 
     $scope.goToDetail = function(cCode) {
-        $location.url('/countries/' + cCode.countryCode +'/capital');
+        $state.go('country', {country: cCode.countryCode});
     };
 }])
-.controller('countryDetailCtrl', ['$scope', '$http', function($scope, $http, country, countriesLoad){
-
-
+.controller('countryDetailCtrl', ['$scope', '$http', 'api', 'neighbors', function($scope, $http, api, neighbors){
 
         $scope.searchThisCountryInfo = function() {
             var url = "http://api.geonames.org/countryInfo";
@@ -192,37 +178,38 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
 
 
         $scope.searchNeighbors = function() {
-            var url = "http://api.geonames.org/neighboursJSON";
-            var request = {
-                username: 'stzy',
-                type: 'JSON',
-                country: $scope.country
-            };
-            $http({
-                method: 'GET',
-                url: url,
-                params: request,
-                cache: true
-            })
-                .then(function (response) {
-                    if(response.data.geonames) {
-                        $scope.searchResults = response.data.geonames;
-                        $scope.howMany = $scope.searchResults.length;
-                    }
-                    else{
-                        $scope.howMany = 0;
-                    }
+            $scope.searchResults = neighbors;
+            $scope.howMay = neighbors.length;
+        };
 
-                },
-                function (response) {
-                    alert('error');
-                });
-        }
         $scope.searchThisCountryInfo();
         $scope.searchCapitals();
         $scope.searchNeighbors();
 
 
-}]);
+}])
+.factory('api', function($http, $q){
+    var baseUrl = 'http://api.geonames.org/';
+    var config = {
+        params: {
+            username: 'stzy'
+        }
+    };
+
+    return {
+        searchNeighbors: searchNeighbors
+    };
+
+    function searchNeighbors(country){
+        var reqParams = {
+            country: country
+        };
+        angular.extend(config.params, reqParams);
+        return $http.get(baseUrl + 'neighboursJSON', config)
+            .then(function(response){
+                return $q.when(response.data.geonames);
+            });
+    }
+});
 
 
