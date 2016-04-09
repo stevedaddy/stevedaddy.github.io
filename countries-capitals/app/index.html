@@ -11,13 +11,15 @@
     <main>
         <route-loading-indicator></route-loading-indicator>
         <div class="animate-view-container">
-            <div ng-if='!isRouteLoading'  ui-view class="animate-view"></div>
+            <div ng-if='!isRouteLoading'  ui-view class="animate-view" autoscroll></div>
         </div>
     </main>
 
     <script type="text/javascript" src="./scripts/angular.js"></script>
     <script type="text/javascript" src="./scripts/angular-ui-router.js"></script>
     <script type="text/javascript" src="./scripts/angular-animate.js"></script>
+<script type="text/javascript" src="http://gregpike.net/demos/angular-local-storage/src/angular-local-storage.js"></script>
+
     <!-- build:js ./_assets/combined.js -->
     <!-- <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
