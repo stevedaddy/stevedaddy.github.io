@@ -1,23 +1,16 @@
 angular.module('ccApp', ['ui.router', 'ngAnimate'])
     .filter('kms', ['$filter', function($filter) {
         return function(input) {
-            // This if fixes that it was displaying 'undefined' until it loaded a value,
-            // instead of using it's placeholder 'No Data' from the template
-            if (input) {
-                return $filter('number')(input) + ' sq km';
-            }
+            return $filter('number')(input) + ' sq km';
         };
     }])
 
-//change these to plachold1, placehold2, and use 'gulp build' for all develop/deploy?
 .config(['$urlRouterProvider', '$httpProvider', '$stateProvider', function($urlRouterProvider, $httpProvider, $stateProvider){
 
         var slowResolve = function(countriesDataLoad){
             return countriesDataLoad.searchThisCountryInfo();
         }
         slowResolve.$inject = ['countriesDataLoad'];
-
-
 
     $httpProvider.defaults.useXDomain = true;
 
@@ -58,42 +51,17 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                     return $stateParams.thiscountry
                 },
                 thiscapital :  function(api, thiscountry) {
-                    return  api.searchCapitals(thiscountry[0].countryCode, thiscountry[0].capital);
+                    capitalreturn =  api.searchCapitals(thiscountry[0].countryCode, thiscountry[0].capital);
+                    return  capitalreturn;
                 }
             }
             
         });
 
 }])
-    .directive('loadingState', function ($rootScope) {
-        var loadingStates = {};
 
-        $rootScope.$on('$stateChangeStart', function (event, toState) {
-            loadingStates[toState.name] = true;
-        });
-
-        ['$stateChangeSuccess', '$stateChangeError', '$stateNotFound'].forEach(function (eventType) {
-            $rootScope.$on(eventType, function (event, toState) {
-                delete loadingStates[toState.name];
-            });
-        });
-
-        return {
-            template: '<div ng-show="loading[state]" ng-transclude></div>',
-            transclude: true,
-            scope: {
-                state: '@loadingState'
-            },
-            controller: function ($scope) {
-                $scope.loading = loadingStates;
-            }
-        };
-    })
 .controller('countryCtrl', ['$scope', '$http', 'api2', 'importcountries', '$state', function($scope, $http, api2, importcountries, $state){
-
-      $scope.importcountries = importcountries;
-      //  console.log(importcountries);
-
+    $scope.importcountries = importcountries;
 
     $scope.goToDetail = function(cCode) {
         $state.go('country', {country: cCode.countryCode});
@@ -101,62 +69,9 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
 }])
 .controller('countryDetailCtrl', ['$scope', '$http', 'api', 'neighbors', 'thiscountry', 'thiscapital',  function($scope, $http, api, neighbors, thiscountry, thiscapital){
 
-        //$scope.searchThisCountryInfo = function() {
-        //    var url = "http://api.geonames.org/countryInfo";
-        //    var request = {
-        //        username: 'stzy',
-        //        type: 'JSON',
-        //        country: $scope.country
-        //    };
-        //    $http({
-        //        method: 'GET',
-        //        url: url,
-        //        params: request,
-        //        cache: true
-        //    })
-        //        .then(function (response) {
-        //            $scope.results3 = response.data.geonames;
-        //            $scope.countryName = $scope.results3[0]['countryName'];
-        //            $scope.population = $scope.results3[0]['population'];
-        //            $scope.areaInSqKm = $scope.results3[0]['areaInSqKm'];
-        //            $scope.capital = $scope.results3[0]['capital'];
-        //            $scope.continent = $scope.results3[0]['continent'];
-        //
-        //          //  continent, timezone
-        //           // console.log(response.data.geonames);
-        //        },
-        //        function (response) {
-        //            alert('error');
-        //        });
-        //}
-
-
-
-
-
-        //$scope.searchNeighbors = function() {
-        //    $scope.searchResults = neighbors;
-        //    $scope.howMay = neighbors.length;
-        //};
-
-        //api.searchThisCountryInfo().then(function(country) {
-        //    $scope.country = $stateParams.country;
-        //});
-        //$scope.country = api.searchThisCountryInfo();
-        //api.searchThisCountryInfo('US');
-        //rr = api.searchThisCountryInfo('US');
-
-
-        $scope.thiscountry = thiscountry[0];
-        $scope.neighbors = neighbors;
-        $scope.thiscapital = thiscapital[0];
-
-     //   $scope.thiscapital =  api.searchCapitals($scope.thiscountry.countryName, $scope.thiscountry.capital);
-
-      //  console.log(thiscapital);
-       // api.searchCapitals('US', 'Washington');
-
-
+    $scope.thiscountry = thiscountry[0];
+    $scope.neighbors = neighbors;
+    $scope.thiscapital = thiscapital[0];
 
 }])
 .factory('api', function($http, $q){
@@ -192,14 +107,8 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         angular.extend(config.params, reqParams);
         return $http.get(baseUrl + 'countryInfo', config, {cache: true})
             .then(function (response) {
+                //how would I do page cacheing??
                 return $q.when(response.data.geonames);
-
-                //
-                //$scope.countryName = $scope.results3[0]['countryName'];
-                //$scope.population = $scope.results3[0]['population'];
-                //$scope.areaInSqKm = $scope.results3[0]['areaInSqKm'];
-                //$scope.capital = $scope.results3[0]['capital'];
-                //$scope.continent = $scope.results3[0]['continent'];
             });
     }
     function searchCapitals(country, capital) {
@@ -214,16 +123,6 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         angular.extend(config.params, reqParams);
         return $http.get(baseUrl + 'search', config, {cache: true})
             .then(function (response) {
-               // results = response.data.geonames;
-               //// console.log(response);
-               // if (results[0]) {
-               //     capPopulation = results[0]['population'];
-               //     capName = results[0]['name'];
-               // }
-               // else {
-               //     capPopulation = 'No Data';
-               //     capName = 'No Data';
-               // }
                 return $q.when(response.data.geonames);
             });
 
@@ -261,11 +160,6 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                     return cache;
                 });
     }
-
-
-
-
-
 })
 
 
