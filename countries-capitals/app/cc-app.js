@@ -1,24 +1,14 @@
 angular.module('ccApp', ['ui.router', 'ngAnimate'])
-    .filter('kms', ['$filter', function($filter) {
-        return function(input) {
-            return $filter('number')(input) + ' sq km';
-        };
-    }])
-
+.filter('kms', ['$filter', function($filter) {
+    return function(input) {
+        return $filter('number')(input) + ' sq km';
+    };
+}])
 .config(['$urlRouterProvider', '$httpProvider', '$stateProvider', function($urlRouterProvider, $httpProvider, $stateProvider){
-
-        var slowResolve = function(countriesDataLoad){
-            return countriesDataLoad.searchThisCountryInfo();
-        }
-        slowResolve.$inject = ['countriesDataLoad'];
-
     $httpProvider.defaults.useXDomain = true;
-
     // For any unmatched url, send to home
     $urlRouterProvider.otherwise("/");
-
     $stateProvider
-
         .state('home', {
             url: "/",
             templateUrl: "home.html"
@@ -37,7 +27,6 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                 }
             }
         })
-
         .state('country', {
             url: "/countries/:country/capital",
             templateUrl: "country-detail.html",
@@ -55,24 +44,18 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                     return  capitalreturn;
                 }
             }
-            
         });
-
 }])
-
 .controller('countryCtrl', ['$scope', '$http', 'api2', 'importcountries', '$state', function($scope, $http, api2, importcountries, $state){
     $scope.importcountries = importcountries;
-
     $scope.goToDetail = function(cCode) {
         $state.go('country', {country: cCode.countryCode});
     };
 }])
 .controller('countryDetailCtrl', ['$scope', '$http', 'api', 'neighbors', 'thiscountry', 'thiscapital',  function($scope, $http, api, neighbors, thiscountry, thiscapital){
-
     $scope.thiscountry = thiscountry[0];
     $scope.neighbors = neighbors;
     $scope.thiscapital = thiscapital[0];
-
 }])
 .factory('api', function($http, $q){
     var baseUrl = 'http://api.geonames.org/';
@@ -81,14 +64,11 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             username: 'stzy'
         }
     };
-
     return {
         searchNeighbors: searchNeighbors,
         searchThisCountryInfo: searchThisCountryInfo,
         searchCapitals: searchCapitals
-
     };
-
     function searchNeighbors(country){
         var reqParams = {
             country: country
@@ -129,7 +109,6 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
     }
 
 })
-
 //when I had this in the factory above it was being overritten by searchThisCountryInfo when you went back to the list after loading the detail page
 .factory('api2', function($http, $q){
 
@@ -142,23 +121,21 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
 
     return {
         importCountries : importCountries
-
     };
     function importCountries() {
-
-            var reqParams = {
-                type: 'JSON'
-            };
-            angular.extend(config.params, reqParams);
-            return $http.get(baseUrl + 'countryInfo', config, {cache: true})
-                .then(function (response) {
-                    //if there's a cached version saved in api2 don't load a new one when the state is loaded
-                    var cache;
-                    if(!cache) {
-                        cache = $q.when(response.data.geonames);
-                    }
-                    return cache;
-                });
+        var reqParams = {
+            type: 'JSON'
+        };
+        angular.extend(config.params, reqParams);
+        return $http.get(baseUrl + 'countryInfo', config, {cache: true})
+        .then(function (response) {
+            //if there's a cached version saved in api2 don't load a new one when the state is loaded
+            var cache;
+            if(!cache) {
+                cache = $q.when(response.data.geonames);
+            }
+            return cache;
+        });
     }
 })
 
