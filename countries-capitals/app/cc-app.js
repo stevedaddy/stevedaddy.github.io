@@ -1,4 +1,4 @@
-angular.module('ccApp', ['ui.router', 'ngAnimate'])
+angular.module('ccApp', ['ui.router', 'ngAnimate', 'ng.q'])
 .filter('kms', ['$filter', function($filter) {
     return function(input) {
         return $filter('number')(input) + ' sq km';
@@ -137,12 +137,13 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             return cache;
         });
     }
-})
+});
 
-
-
-
-
+//angular.module('mockedDashboardJSON',[])
+//    .value('defaultJSON',{
+//        fakeData1:{'really':'fake2'},
+//        fakeData2:{'history':'faked'}
+//});
 
 
 

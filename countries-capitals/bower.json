@@ -12,6 +12,8 @@
     "angular": "^1.5.3",
     "angular-animate": "^1.5.3",
     "angular-ui-router": "^0.2.18",
-    "components-font-awesome": "^4.5.0"
+    "components-font-awesome": "^4.5.0",
+    "angular-mocks": "^1.5.3",
+    "sinon": "^1.17.3"
   }
 }
