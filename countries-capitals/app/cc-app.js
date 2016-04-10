@@ -133,6 +133,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate', 'ng.q'])
             var cache;
             if(!cache) {
                 cache = $q.when(response.data.geonames);
+                console.log(JSON.stringify(response.data.geonames));
             }
             return cache;
         });
