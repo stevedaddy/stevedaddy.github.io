@@ -1,10 +1,35 @@
-angular.module('ccApp', ['ui.router', 'ngAnimate'])
+angular.module('myFilters', [])
+//  ________________________________________________________________
+//
+//                        FILTERS
+//  __________________________________________ _____________________
 .filter('kms', ['$filter', function($filter) {
-    return function(input) {
-        return $filter('number')(input) + ' sq km';
-    };
-}])
+    return function (input) {
+       isInputNumber = $filter('number')(input);
+        //if the input is a number return the filtered value, else return help message
+       isInputNumber ?
+       ccResult = isInputNumber + ' sq km' :
+       ccResult = 'The kms filter only accepts numbers, some other input was provided for some wacky reason.';
+       return ccResult;
+    }
+}]);
+angular.module('ccApp', ['ui.router', 'ngAnimate', 'myFilters'])
+//I rewrote this in it's own module, is that cool?
+// I was having trouble running unit tests on it declared this way:
+//.filter('kms', ['$filter', function($filter) {
+//    return function(input) {
+//        return $filter('number')(input) + ' sq km';
+//    };
+//}])
+//  ________________________________________________________________
+//
+//                        CONFIG
+//  __________________________________________ _____________________
 .config(['$urlRouterProvider', '$httpProvider', '$stateProvider', function($urlRouterProvider, $httpProvider, $stateProvider){
+    //  ________________________________________________________________
+    //
+    //                        ROUTING
+    //  __________________________________________ _____________________
     $httpProvider.defaults.useXDomain = true;
     // For any unmatched url, send to home
     $urlRouterProvider.otherwise("/");
@@ -45,7 +70,13 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
                 }
             }
         });
+
+
 }])
+//  ________________________________________________________________
+//
+//                        CONTROLLERS
+//  __________________________________________ _____________________
 .controller('countryCtrl', ['$scope', '$http', 'api2', 'importcountries', '$state', function($scope, $http, api2, importcountries, $state){
     $scope.importcountries = importcountries;
     $scope.goToDetail = function(cCode) {
@@ -56,6 +87,28 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
     $scope.thiscountry = thiscountry[0];
     $scope.neighbors = neighbors;
     $scope.thiscapital = thiscapital[0];
+}])
+//  ________________________________________________________________
+//
+//                        SERVICES
+//  __________________________________________ _____________________
+.factory('LanguagesServicePromise', ['$http', '$q', function($http, $q){
+    var lng = {};
+    lng.get = function() {
+        var deferred = $q.defer();
+        $http.get('languages.json')
+            .then(function(response){
+                var languages = response.data.map(function(item){
+                    return item.name;
+                });
+                deferred.resolve(languages);
+            })
+            .catch(function(response){
+                deferred.reject(response);
+            });
+        return deferred.promise;
+    };
+    return lng;
 }])
 .factory('api', function($http, $q){
     var baseUrl = 'http://api.geonames.org/';
@@ -105,20 +158,16 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             .then(function (response) {
                 return $q.when(response.data.geonames);
             });
-
     }
-
 })
 //when I had this in the factory above it was being overritten by searchThisCountryInfo when you went back to the list after loading the detail page
 .factory('api2', function($http, $q){
-
     var baseUrl = 'http://api.geonames.org/';
     var config = {
         params: {
             username: 'stzy'
         }
     };
-
     return {
         importCountries : importCountries
     };
@@ -133,21 +182,10 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             var cache;
             if(!cache) {
                 cache = $q.when(response.data.geonames);
+                // grab data to make mock for unit testing
+              //  console.log(JSON.stringify(response.data.geonames, null, 0));
             }
             return cache;
         });
     }
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
