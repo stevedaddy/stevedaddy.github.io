@@ -1,7 +1,12 @@
 angular.module('ccApp', ['ui.router', 'ngAnimate'])
 .filter('kms', ['$filter', function($filter) {
     return function(input) {
-        return $filter('number')(input) + ' sq km';
+        if($filter('number')(input)){
+            return $filter('number')(input) + ' sq km';
+        }
+        else{
+            return 'You must enter a number.';
+        }
     };
 }])
 .config(['$urlRouterProvider', '$httpProvider', '$stateProvider', function($urlRouterProvider, $httpProvider, $stateProvider){
@@ -70,10 +75,11 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         searchCapitals: searchCapitals
     };
     function searchNeighbors(country){
-        var reqParams = {
-            country: country
-        };
-        angular.extend(config.params, reqParams);
+        // var reqParams = {
+        //     country: country
+        // };
+        // angular.extend(config.params, reqParams);
+        //console.log(baseUrl + 'neighboursJSON', config, {cache: true});
         return $http.get(baseUrl + 'neighboursJSON', config, {cache: true})
             .then(function(response){
                 return $q.when(response.data.geonames);
@@ -111,14 +117,12 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
 })
 //when I had this in the factory above it was being overritten by searchThisCountryInfo when you went back to the list after loading the detail page
 .factory('api2', function($http, $q){
-
     var baseUrl = 'http://api.geonames.org/';
     var config = {
         params: {
             username: 'stzy'
         }
     };
-
     return {
         importCountries : importCountries
     };
@@ -133,6 +137,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             var cache;
             if(!cache) {
                 cache = $q.when(response.data.geonames);
+                //console.log(JSON.stringify(response.data.geonames));
             }
             return cache;
         });
