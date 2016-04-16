@@ -1,7 +1,6 @@
 {
   "name": "countries-capitals",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,12 +17,18 @@
     "gulp-rev": "^7.0.0",
     "gulp-uglify": "^1.5.3",
     "gulp-usemin": "^0.3.21",
-  "chai": "2.2.0",
-  "gulp-protractor": "0.0.12",
-  "karma": "0.12.31",
-  "karma-chai": "0.1.0",
-  "karma-chrome-launcher": "0.1.7",
-  "karma-mocha": "0.1.10",
-  "protractor": "2.0.0"
-  }
+    "chai": "2.2.0",
+    "gulp-protractor": "0.0.12",
+    "karma": "0.12.31",
+    "karma-chai": "0.1.0",
+    "karma-chrome-launcher": "0.1.7",
+    "karma-mocha": "0.1.10",
+    "protractor": "2.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "stevedaddy.github.io"
+  },
+  "description": ""
 }

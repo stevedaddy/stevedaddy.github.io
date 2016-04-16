@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Tue Apr 12 2016 20:35:58 GMT-0700 (Pacific Daylight Time)
+// Generated on Mon Apr 11 2016 18:02:25 GMT-0700 (Pacific Daylight Time)
 
 module.exports = function(config) {
   config.set({
@@ -10,22 +10,20 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-      frameworks: ['jasmine'],
+    frameworks: ['jasmine'],
 
 
     // list of files / patterns to load in the browser
     files: [
-        'app/bower_components/angular/angular.js',
-        'app/bower_components/angular-animate/angular-animate.js',
-        'app/bower_components/angular-ui-router/release/angular-ui-router.js',
-        'app/bower_components/angular-mocks/angular-mocks.js',
-        'app/bower_components/angular-strap/dist/angular-strap.js',
-        'app/bower_components/angular-strap/dist/angular-strap.tpl.js',
-        'bower_components/angular-resource/angular-resource.js',
-        'app/routeLoadingIndicator.js',
-        'app/unit/*.js',
-        'app/cc-app.js'
-
+        '../app/bower_components/angular/angular.js',
+        '../app/bower_components/jquery/dist/jquery.js',
+        '../app/bower_components/angular-strap/dist/angular-strap.js',
+        '../app/bower_components/angular-strap/dist/angular-strap.tpl.js',
+        '../app/bower_components/angular-mocks/angular-mocks.js',
+        '../app/bower_components/angular-route/angular-route.js',
+        './unit/*.js',
+        './mock/*.js',
+        '../app/app.js'
     ],
 
 
@@ -70,10 +68,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
-
-    // Concurrency level
-    // how many browser should be started simultaneous
-    concurrency: Infinity
-  })
-}
+    singleRun: false
+  });
+};

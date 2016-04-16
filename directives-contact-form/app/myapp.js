@@ -5,20 +5,6 @@ angular.module('MyApp', [
     'ngMessages',
     'ngAnimate'
 ])
-
-
-
-/**
- * Custom submit directive that will only submit when all the validation has passed
- * for all the fields. This extends on the ng-submit directive provided by AngularJS.
- *
- * This directive will also remove the 'pristine' flag from all the fields when
- * hitting submit, allowing the form to display no errors until the submit button
- * is clicked/enter is pressed.
- *
- * The variable 'app' is the instance of a module.
- * E.g. var app = angular.module('my-app', []);
- */
 .directive('optIn', function() {
     return {
         restrict: 'E',
@@ -27,8 +13,7 @@ angular.module('MyApp', [
         replace: true
     }
 })
-.directive('customSubmit', function()
-{
+.directive('customSubmit', function(){
     return {
         restrict: 'A',
         link: function( scope , element , attributes )
