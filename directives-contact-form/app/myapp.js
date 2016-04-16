@@ -23,7 +23,7 @@ angular.module('MyApp', [
     return {
         restrict: 'E',
         transclude: true,
-        templateUrl: 'returnform.html',
+        templateUrl: 'loginView.html',
         replace: true
     }
 })

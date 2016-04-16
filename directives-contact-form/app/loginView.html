@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <div class="opt-in"><div ng-transclude></div>
+                <h1>Simple Login Form</h1>
+                <form name="createProjectForm" data-custom-submit="submit(project)" novalidate>
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : createProjectForm.name.$invalid && !createProjectForm.name.$pristine }">
+                        <label for="name">First Name:</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="First Name" required data-ng-minlength="3" data-ng-model="project.name">
+                        <span class="help-block" ng-show="createProjectForm.name.$dirty && createProjectForm.name.$error.required">The name field is required.</span>
+                        <span class="help-block" ng-show="createProjectForm.name.$error.minlength">The name must be at least 3 characters.</span>
+                    </div>
+                    <div class="form-group"
+                         ng-class="{'has-error': createProjectForm.lastName.$invalid && !createProjectForm.lastName.$pristine}">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required data-ng-minlength="3" data-ng-model="project.lastName">
+                        <span class="help-block" ng-show="createProjectForm.lastName.$dirty && createProjectForm.lastName.$error.required">The name field is required.</span>
+                        <span class="help-block" ng-show="createProjectForm.lastName.$error.minlength">The name must be at least 3 characters.</span>
+
+                    </div>
+                    <div class="form-group"
+                         ng-class="{'has-error': createProjectForm.email.$invalid && !createProjectForm.email.$pristine}">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" required data-ng-minlength="3" data-ng-model="project.email">
+                        <span class="help-block" ng-show="createProjectForm.email.$dirty && createProjectForm.email.$error.required">The email field is required.</span>
+                        <span class="help-block" ng-show="createProjectForm.email.$dirty && createProjectForm.email.$error.email">Your email is invalid.</span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary pull-right"
+                                value="Login" title="Login">
+                            <span>Login</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
