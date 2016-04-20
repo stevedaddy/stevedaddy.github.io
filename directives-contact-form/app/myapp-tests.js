@@ -110,9 +110,9 @@ describe('Test input form: ', function() {
             expect(x.thisElement.hasClass('ng-valid')).toEqual(false);
         });
 
-        it('Submit: button should trigger form submit', function () {
+        it('Submit: button should not trigger form submit when not filled out', function () {
             var e = setDir('.btn');
-            e.thisElement.triggerHandler('button');
+            e.thisElement.click();
             var x = setDir('.create-project-form');
             expect(x.thisElement.hasClass('ng-valid')).toEqual(false);
         });
