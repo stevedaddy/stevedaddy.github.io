@@ -10,16 +10,21 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+      frameworks: ['jasmine'],
+
 
 
     // list of files / patterns to load in the browser
     files: [
         './bower_components/angular/angular.js',
+        './bower_components/angular-ui-router/release/angular-ui-router.js',
+        'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-mocks.js',
         './bower_components/angular-bootstrap/ui-bootstrap.js',
         './bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
         './bower_components/angular-messages/angular-messages.js',
         './bower_components/angular-animate/angular-animate.js',
+        'http://code.jquery.com/jquery-1.11.3.js',
+        //'http://chaijs.com/chai.js',
         './myapp.js',
         './myapp-tests.js'
 
@@ -33,27 +38,7 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-  preprocessors: {
-      '**/*.html': ['ng-html2js']
-  },
 
-  ngHtml2JsPreprocessor: {
-  // strip this from the file path
-  stripPrefix: 'public/',
-  stripSuffix: '.ext',
-  // prepend this to the
-  prependPrefix: 'served/',
-
-  // or define a custom transform function
-  // - cacheId returned is used to load template
-  //   module(cacheId) will return template at filepath
-  cacheIdFromPath: function(filepath) {
-      // example strips 'public/' from anywhere in the path
-      // module(app/templates/template.html) => app/public/templates/template.html
-      var cacheId = filepath.strip('public/', '');
-      return cacheId;
-  }
-  },
 
 
     // test results reporter to use
@@ -81,9 +66,36 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+      browsers: ['Chrome'],
+
+      ///*********************************************************/
+      //// Note: this was added AFTER karma init was completed.
+      ///*********************************************************/
+      //ngHtml2JsPreprocessor: {
+      //    stripPrefix: 'spp/',
+      //    //stripSufix: '.ext',
+      //
+      //    // setting this option will create only a single module that contains templates
+      //    // from all the files, so you can load them all with module('foo')
+      //    moduleName: 'myAppTemplates'
+      //},
+
+      // list of files to exclude
+      exclude: [],
 
 
+      // preprocess matching files before serving them to the browser
+      // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+      preprocessors: {
+          'app/**/*.html': ['ng-html2js']
+      },
+
+
+
+      ngHtml2JsPreprocessor: {
+          stripPrefix: 'app/',
+          moduleName: 'my.templates'
+      },
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false,

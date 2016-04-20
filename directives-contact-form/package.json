@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-connect": "^3.2.2",
@@ -19,12 +20,17 @@
     "gulp-usemin": "^0.3.21",
     "jasmine": "^2.4.1",
     "karma": "^0.13.22",
+    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.2.3",
     "karma-jasmine": "^0.3.8",
-    "karma-ng-html2js-preprocessor": "^0.2.2"
+    "karma-mocha": "^0.2.2",
+    "karma-ng-html2js-preprocessor": "^0.2.2",
+    "mocha": "^2.4.5"
   },
   "description": "",
   "dependencies": {
+    "express": "4.12.4",
+    "morgan": "1.5.3",
     "gulp-update": "0.0.2"
   }
 }
