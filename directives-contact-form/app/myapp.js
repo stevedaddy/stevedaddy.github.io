@@ -3,7 +3,6 @@
 angular.module('MyApp', [
     'ui.bootstrap'
 ])
-
 .directive('optIn', function() {
     return {
         restrict: 'E',
@@ -13,9 +12,6 @@ angular.module('MyApp', [
         link: function (scope, element, attributes) {
             element.bind('submit', function (e) {
                 e.preventDefault();
-                ['input', 'textarea', 'select'].forEach(function(e){
-                    element.find(e).removeClass('ng-pristine');
-                });
                 // Set all the fields to dirty and apply the changes on the scope so that
                 // validation errors are shown on submit only.
                 angular.forEach( scope.createProjectForm , function ( formElement , fieldName ) {
@@ -26,7 +22,6 @@ angular.module('MyApp', [
                     formElement.$dirty = true;
                 });
                 scope.$apply();
-
                 if (scope.createProjectForm.$valid) {
                     alert('it is valid');
                 }
