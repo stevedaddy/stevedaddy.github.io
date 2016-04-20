@@ -1,24 +1,21 @@
-
-
 describe('Test input form: ', function() {
     var $compile, $scope, $templateCache, $document, template,
         html = '<opt-in><div class="brand-logo"></div></opt-in>',
         mockHtml = '<div class="container"> <div class="row"> <div class="col-xs-12 col-sm-6 col-sm-offset-3"> <div class="opt-in"><div ng-transclude></div> <h1>Simple Login Form</h1> <form name="createProjectForm" ng-submit="createProjectForm.$valid && createProjectForm.submit()" class="create-project-form" novalidate> <div class="form-group" ng-class="{ \'has-error\' : createProjectForm.name.$invalid && !createProjectForm.name.$pristine }"> <label for="name">First Name:</label> <input type="text" class="form-control" name="name" id="name" placeholder="First Name" required data-ng-minlength="3" data-ng-model="project.name"> <span class="help-block" ng-show="createProjectForm.name.$dirty && createProjectForm.name.$error.required">The name field is required.</span> <span class="help-block" ng-show="createProjectForm.name.$error.minlength">The name must be at least 3 characters.</span> </div> <div class="form-group" ng-class="{\'has-error\': createProjectForm.lastName.$invalid && !createProjectForm.lastName.$pristine}"> <label for="lastName">Last Name:</label> <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required data-ng-minlength="3" data-ng-model="project.lastName"> <span class="help-block" ng-show="createProjectForm.lastName.$dirty && createProjectForm.lastName.$error.required">The name field is required.</span> <span class="help-block" ng-show="createProjectForm.lastName.$error.minlength">The name must be at least 3 characters.</span> </div> <div class="form-group" ng-class="{\'has-error\': createProjectForm.email.$invalid && !createProjectForm.email.$pristine}"> <label for="email">Email:</label> <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" required data-ng-minlength="3" data-ng-model="project.email"> <span class="help-block" ng-show="createProjectForm.email.$dirty && createProjectForm.email.$error.required">The email field is required.</span> <span class="help-block" ng-show="createProjectForm.email.$dirty && createProjectForm.email.$error.email">Your email is invalid.</span> </div> <div class="form-group"> <button ng-disabled="createProjectForm.$invalid" type="submit" class="btn btn-primary pull-right" value="Login" title="Login"> <span>Login</span> </button> </div> </form> </div> </div> </div></div>';
 
     beforeEach(module('MyApp'));
-
     beforeEach(inject(function(_$compile_, _$rootScope_, _$templateCache_, _$document_){
         $document = _$document_;
         $compile = _$compile_;
         $scope = _$rootScope_.$new();
         $templateCache = _$templateCache_;
-      template = $templateCache.put('loginView.html', mockHtml);
-     //  viewHtml = $templateCache.get('loginView.html');
-     //
-     //  if(!viewHtml) {
-     //       viewHtml = $.ajax('loginView.html', {async: false}).responseText;
-     //       $templateCache.put('loginView.html', viewHtml);
-     //  }
+        template = $templateCache.put('loginView.html', mockHtml);
+         //  viewHtml = $templateCache.get('loginView.html');
+         //
+         //  if(!viewHtml) {
+         //       viewHtml = $.ajax('loginView.html', {async: false}).responseText;
+         //       $templateCache.put('loginView.html', viewHtml);
+         //  }
     }));
 
     function setDir(thisSelector) {
@@ -29,22 +26,6 @@ describe('Test input form: ', function() {
         $scope.$apply();
         return this;
     };
-    beforeEach(inject(function(_$compile_, _$rootScope_) {
-        $compile = _$compile_;
-        $rootScope = _$rootScope_;
-        $rootScope.isOn = false;
-        formElement = angular.element(html);
-        var element = $compile(formElement)($rootScope);
-        $rootScope.$digest();
-    }));
-    beforeEach(inject(function($templateCache) {
-        viewHtml = $templateCache.get('loginView.html');
-       // console.log(viewHtml);
-        if(!viewHtml) {
-            viewHtml = $.ajax('loginView.html', {async: false}).responseText;
-            $templateCache.put('loginView.html', viewHtml);
-        }
-    }));
 
     describe('Inputs should exsist: ', function () {
         it('should have a form', function () {
@@ -96,7 +77,6 @@ describe('Test input form: ', function() {
             expect(e.thisElement.hasClass('ng-valid')).toEqual(true);
         });
 
-
         it('Input:email should be invalid with anything but an email address', function () {
             var e = setDir('#email');
             e.thisElement.val('S').triggerHandler('input');
@@ -107,8 +87,6 @@ describe('Test input form: ', function() {
             e.thisElement.val('stevethewebguy@gmail.com').triggerHandler('input');
             expect(e.thisElement.hasClass('ng-valid')).toEqual(true);
         });
-
-
     });
     describe('Validation should work on whole form', function () {
         it('Should validate with good inputs', function () {
@@ -138,26 +116,6 @@ describe('Test input form: ', function() {
             var x = setDir('.create-project-form');
             expect(x.thisElement.hasClass('ng-valid')).toEqual(false);
         });
-        //
-        //it('should connect the button with the div', function () {
-        //    var e = setDir('.btn');
-        //    e.thisElement.triggerHandler('click');
-        //    //spyOn(scope.window, 'getBankAccountData').and.callFake(fakedFunction);
-        //
-        //    spyOn(window, alert.window) ;
-        //    //spyOn(obj, 'myMethod')
-        //    var w = setDir('#name');
-        //    w.thisElement.val('steve').triggerHandler('input');
-        //    var s = setDir('#lastName');
-        //    s.thisElement.val('Tchorzewski').triggerHandler('input');
-        //    var y = setDir('#email');
-        //    y.thisElement.val('stevethewebguy@gmail.com').triggerHandler('input');
-        //
-        //    var tohave = 'The form is valid!!';
-        //     expect(window.alert).toHaveBeenCalled();
-        //});
-
-
 
         it('Submit: button should trigger form submit', function () {
 

@@ -83,21 +83,21 @@ module.exports = function(config) {
 
       // preprocess matching files before serving them to the browser
       // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-      preprocessors: {
-          'app/**/*.html': ['ng-html2js']
-      },
+      //preprocessors: {
+      //    'app/loginView.html': ['ng-html2js']
+      //},
 
-      proxies: {
-          '/loginView.html': 'http://localhost:9876/loginView.html'
-      },
+      //proxies: {
+      //    'loginView.html': 'http://localhost:8888/loginView.html'
+      //},
 
-      ngHtml2JsPreprocessor: {
-          stripPrefix: 'app/',
-          moduleName: 'my.templatess'
-      },
+      //ngHtml2JsPreprocessor: {
+      //    stripPrefix: 'app/',
+      //    moduleName: 'my.templatess'
+      //},
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
