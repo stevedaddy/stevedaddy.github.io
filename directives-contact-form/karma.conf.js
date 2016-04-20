@@ -16,11 +16,12 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+        './bower_components/jquery/dist/jquery.js',
         './bower_components/angular/angular.js',
         './bower_components/angular-mocks/angular-mocks.js',
         './bower_components/angular-bootstrap/ui-bootstrap.js',
         './bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
-        './bower_components/jquery/dist/jquery.js',
+        //'http://chaijs.com/chai.js',
         './myapp.js',
         './myapp-tests.js'
 
@@ -86,11 +87,13 @@ module.exports = function(config) {
           'app/**/*.html': ['ng-html2js']
       },
 
-
+      proxies: {
+          '/loginView.html': 'http://localhost:9876/loginView.html'
+      },
 
       ngHtml2JsPreprocessor: {
           stripPrefix: 'app/',
-          moduleName: 'my.templates'
+          moduleName: 'my.templatess'
       },
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

@@ -12,7 +12,13 @@ describe('Test input form: ', function() {
         $compile = _$compile_;
         $scope = _$rootScope_.$new();
         $templateCache = _$templateCache_;
-        template = $templateCache.put('loginView.html', mockHtml);
+      template = $templateCache.put('loginView.html', mockHtml);
+     //  viewHtml = $templateCache.get('loginView.html');
+     //
+     //  if(!viewHtml) {
+     //       viewHtml = $.ajax('loginView.html', {async: false}).responseText;
+     //       $templateCache.put('loginView.html', viewHtml);
+     //  }
     }));
 
     function setDir(thisSelector) {
@@ -23,7 +29,22 @@ describe('Test input form: ', function() {
         $scope.$apply();
         return this;
     };
-
+    beforeEach(inject(function(_$compile_, _$rootScope_) {
+        $compile = _$compile_;
+        $rootScope = _$rootScope_;
+        $rootScope.isOn = false;
+        formElement = angular.element(html);
+        var element = $compile(formElement)($rootScope);
+        $rootScope.$digest();
+    }));
+    beforeEach(inject(function($templateCache) {
+        viewHtml = $templateCache.get('loginView.html');
+       // console.log(viewHtml);
+        if(!viewHtml) {
+            viewHtml = $.ajax('loginView.html', {async: false}).responseText;
+            $templateCache.put('loginView.html', viewHtml);
+        }
+    }));
 
     describe('Inputs should exsist: ', function () {
         it('should have a form', function () {
@@ -86,6 +107,8 @@ describe('Test input form: ', function() {
             e.thisElement.val('stevethewebguy@gmail.com').triggerHandler('input');
             expect(e.thisElement.hasClass('ng-valid')).toEqual(true);
         });
+
+
     });
     describe('Validation should work on whole form', function () {
         it('Should validate with good inputs', function () {
@@ -107,6 +130,51 @@ describe('Test input form: ', function() {
             y.thisElement.val('s').triggerHandler('input');
             var x = setDir('.create-project-form');
             expect(x.thisElement.hasClass('ng-valid')).toEqual(false);
+        });
+
+        it('Submit: button should trigger form submit', function () {
+            var e = setDir('.btn');
+            e.thisElement.triggerHandler('button');
+            var x = setDir('.create-project-form');
+            expect(x.thisElement.hasClass('ng-valid')).toEqual(false);
+        });
+        //
+        //it('should connect the button with the div', function () {
+        //    var e = setDir('.btn');
+        //    e.thisElement.triggerHandler('click');
+        //    //spyOn(scope.window, 'getBankAccountData').and.callFake(fakedFunction);
+        //
+        //    spyOn(window, alert.window) ;
+        //    //spyOn(obj, 'myMethod')
+        //    var w = setDir('#name');
+        //    w.thisElement.val('steve').triggerHandler('input');
+        //    var s = setDir('#lastName');
+        //    s.thisElement.val('Tchorzewski').triggerHandler('input');
+        //    var y = setDir('#email');
+        //    y.thisElement.val('stevethewebguy@gmail.com').triggerHandler('input');
+        //
+        //    var tohave = 'The form is valid!!';
+        //     expect(window.alert).toHaveBeenCalled();
+        //});
+
+
+
+        it('Submit: button should trigger form submit', function () {
+
+            spyOn(window, 'alert').and.callThrough();
+            var p = setDir('#name');
+            p.thisElement.val('steve').triggerHandler('input');
+            var s = setDir('#lastName');
+            s.thisElement.val('Tchorzewski').triggerHandler('input');
+            var y = setDir('#email');
+            y.thisElement.val('stevethewebguy@gmail.com').triggerHandler('input');
+            var e = setDir('.btn');
+
+            var g = setDir('.btn');
+            g.thisElement.click();
+
+            var tohave = 'The form is valid!!';
+            expect(window.alert).toHaveBeenCalledWith(tohave);
         });
 
     });
