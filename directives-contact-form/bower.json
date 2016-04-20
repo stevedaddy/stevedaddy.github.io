@@ -1,0 +1,17 @@
+{
+  "name": "countries-capitals",
+  "homepage": "https://github.com/stevedaddy/stevedaddy.github.io",
+  "authors": [
+    "Steve T <stevethewebguy@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-mocks": "^1.5.3",
+    "ui-bootstrap": "^1.3.1",
+    "jquery": "1.11.3"
+  }
+}
