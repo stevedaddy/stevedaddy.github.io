@@ -23,13 +23,14 @@ angular.module('MyApp', [
                 });
                 scope.$apply();
                 if (scope.createProjectForm.$valid) {
-                    alert('it is valid');
+                    alert('The form is valid!!');
                 }
                 else{
-                  //  console.log(scope.createProjectForm);
-                   angular.element('.ng-invalid').focus();
+                    // angular way to select invalid inputs in the dom (first one first)
+                    var finder =  element[0].querySelector('input.ng-invalid');
+                    finder.focus();
                 }
-                element.addClass('submitted');
+               // element.addClass('submitted');
             });
         }
     };
