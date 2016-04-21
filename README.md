@@ -1,2 +1,2 @@
 # stevedaddy.github.io
-My pages repo
+Cool repo, bro.
