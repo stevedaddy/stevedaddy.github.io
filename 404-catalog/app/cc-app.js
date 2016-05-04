@@ -54,6 +54,7 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         searchThisCountryInfo: searchThisCountryInfo
     };
     function searchThisCountryInfo(country) {
+       // console.log(country);
         var reqParams = {
             country: country,
             type: 'JSON'
@@ -62,35 +63,24 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
         return $http.get(baseUrl + 'countryInfo', config, {cache: true})
             .then(function (response) {
                // console.log(response.data.geonames);
-                console.log(response.data.geonames['0'].countryCode);
+               // console.log(response.data.geonames['0'].countryCode);
                 //how would I do page cacheing??
                 return $q.when(response.data.geonames);
             });
     }
 })
-//when I had this in the factory above it was being overritten by searchThisCountryInfo when you went back to the list after loading the detail page
 .factory('api2', function($http, $q){
-    var baseUrl = 'http://api.geonames.org/';
-    var config = {
-        params: {
-            username: 'stzy'
-        }
-    };
     return {
         importCountries : importCountries
     };
     function importCountries() {
-        var reqParams = {
-            type: 'JSON'
-        };
-        angular.extend(config.params, reqParams);
-        return $http.get(baseUrl + 'countryInfo', config, {cache: true})
+        return $http.get('./resources.json', {cache: true})
         .then(function (response) {
             //if there's a cached version saved in api2 don't load a new one when the state is loaded
             var cache;
             if(!cache) {
                 cache = $q.when(response.data.geonames);
-                console.log(JSON.stringify(response.data.geonames));
+                //console.log(JSON.stringify(response.data.geonames));
             }
             return cache;
         });
