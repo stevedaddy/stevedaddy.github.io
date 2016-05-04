@@ -1,0 +1,19 @@
+<section class="table-list-countries-wrap">
+    <table class="table-list-countries">
+        <th>Name</th>
+        <th>Country Code</th>
+        <th>Capital</th>
+        <th>Area (sq km)</th>
+        <th>Population</th>
+        <th>Continent</th>
+        <tr ng-repeat="result in importcountries | orderBy:'-countryName'" ng-click="goToDetail(result)">
+            <td>{{ result.countryName || 'No Data' }}</td>
+            <td>{{ result.countryCode || 'No Data' }}</td>
+            <td>{{ result.capital || 'No Data' }}</td>
+            <td>{{ (result.areaInSqKm | number) || 'No Data' }}</td>
+            <td>{{ (result.population | number) || 'No Data' }}</td>
+            <td>{{ result.continent || 'No Data' }}</td>
+        </tr>
+    </table>
+</section>
+<nav class="bottom-nav"><a ui-sref="home">Home</a></nav>

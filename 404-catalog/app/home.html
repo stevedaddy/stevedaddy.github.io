@@ -1,0 +1,38 @@
+<section class="home-view">
+    <nav class="bottom-nav"><a ui-sref="countries">Browse Countries</a></nav>
+    <div class="bestsellers">
+
+        <ul class="products-grid" id="products-grid-table">
+            <li ng-repeat="result in importproducts.Categories">
+                <!-- add each cats CategoryUniqueID to a var called cat  -->
+                <div class="bestsellers-title-block" ng-init="cat = result.CategoryUniqueID">
+                    <h3 class="bestsellers-title">{{ result.Name || 'No Data' }}</h3>
+
+                    <!--<h2 class="sub-heads">See whats really hot right now</h2>-->
+                </div>
+
+                <ul class="products-grid" id="products-grid-table">
+                    <!-- if  CategoriesID array has this cat in it -->
+                    <li ng-repeat="result in importproducts.Products" ng-if="result.CategoriesID | contains: cat">
+                    <span class="pro-img">
+                    <a href=" {{ result.ProductUrl }}" title="{{ result.Name || 'No Data' }}"
+                       class="product-image"><img
+                            ng-src="{{ result.ImageUrl || 'No Data' }}"
+                            alt="{{ result.Name || 'No Data' }}"></a>
+                    </span>
+
+                        <p><a href="{{ result.ProductUrl || '#' }}"
+                              title="{{ result.Name || 'No Data' }}">{{ result.Name || 'No Data' }}</a>
+                        </p>
+                    <span class="price">
+                        <div class="price-box">
+                            <span>{{ result.Price || 'No Data' }}</span>
+                        </div>
+                    </span>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,16 @@
+<section class="detail-view">
+    <div>
+        <!--antiartica does not have all these values-->
+        <h1>{{ thiscountry.countryName || 'No Data' }}</h1>
+        Population of Country: {{ (thiscountry.population) || 'No Data' }}<br>
+        Area: {{ (thiscountry.areaInSqKm) || 'No Data' }}<br>
+        Continent: {{ thiscountry.continent || 'No Data' }}<br>
+
+        <div>
+            <img ng-src="http://www.geonames.org/flags/x/{{ thiscountry.countryCode | lowercase }}.gif" class="map-img"/>
+            <img ng-src="http://www.geonames.org/img/country/250/{{ thiscountry.countryCode }}.png" class="flag-img"/>
+        </div>
+        <div class="clear"></div>
+        <nav class="bottom-nav"><a ui-sref="home">Back to catalog</a></nav>
+    </div>
+</section>
