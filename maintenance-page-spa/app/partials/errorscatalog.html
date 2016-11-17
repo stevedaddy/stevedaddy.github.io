@@ -1,0 +1,34 @@
+
+<div class="container">
+
+    <div class="row">
+        <div class="bestsellers anim-slide-below-fade">
+            <div ng-repeat="category in getCatalog">
+                <div class="row">
+                    <div class="bestsellers-title-block">
+                        <h3 ng-init="cat = category.CategoryUniqueID" class="bestsellers-title">{{ category.Name || 'No Data' }}</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <flex-slider class="carousel" flex-slide="product in getProducts track by $index" animation="slide" animation-loop="false" item-width="210" item-margin="5">
+                        <li ng-if="product.CategoriesID | contains: cat">
+                            <div class="borderbox">
+                                    <span class="pro-img">
+                                        <a ui-sref="product-details({ productId: product.ProductUniqueID })"> <img ng-src="{{ product.ImageUrlThumb }}" class="img-responsive" alt="a" /></a>
+                                    </span>
+                                <p><a ui-sref="product-details({ productId: product.ProductUniqueID })">{{ product.Name || 'No Data' }}</a></p>
+                                    <span class="price">
+                                        <div class="price-box">
+                                            <span> {{ product.Price || 'No Data' }}</span>
+                                        </div>
+                                     </span>
+                            </div>
+                        </li>
+                    </flex-slider>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

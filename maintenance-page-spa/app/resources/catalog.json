@@ -1,0 +1,1549 @@
+{"Categories": [
+        {
+            "Name": "Styling Sets",
+            "CategoryUniqueID": "15",
+            "CategoryUrl": "http://numeproducts.com/catalog",
+            "CategoryParentID": "2"
+        },
+        {
+            "Name": "Flat Irons",
+            "CategoryUniqueID": "23",
+            "CategoryUrl": "http://numeproducts.com/styling-tools/flat-irons",
+            "CategoryParentID": "22"
+        },
+        {
+            "Name": "Curling Wands",
+            "CategoryUniqueID": "24",
+            "CategoryUrl": "http://numeproducts.com/styling-tools/curling-wands",
+            "CategoryParentID": "22"
+        },
+        {
+            "Name": "Hair Dryers",
+            "CategoryUniqueID": "25",
+            "CategoryUrl": "http://numeproducts.com/styling-tools/hair-dryers",
+            "CategoryParentID": "22"
+        }
+    ],
+    "Products": [
+        {
+            "Name": "Octowand",
+            "ProductUniqueID": "546",
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/octowand-curling-iron-set/",
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/o/c/octowand_2_1.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/7/2/727a3099_web_new.jpg",
+            "CategoriesID": [
+                "2",
+                "15"
+            ],
+            "Description": "Eight interchangeable wands. Endless style possibilities. &lt;br&gt;\r\n                You’re never at a loss for ways to style with the NuMe Octowand. Unleash your inner curl maven with\n                eight interchangeable heat barrels to create styles from loose mermaid waves to defined curls.\n                Octowand’s clipless heat barrels are tourmaline-infused and ceramic coated, penetrating the hair with\n                600% more negative ions to lock in natural moisture, add luminous shine, and keep your curls beautiful\n                all day. The must-have Octowand offers an easy-to-read digital temperature control and heats up to 450\n                degrees for professional styling results.",
+            "Price": "300.00",
+            "Availability": "true"
+        },
+        {
+            "Name": "Lustrum",
+            "ProductUniqueID": "1138",
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/lustrum-curling-iron-set/",
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/e/u/eu-lust-blk_3_new.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/e/u/eu-lust-blk_4_new.jpg",
+
+            "CategoriesID": [
+                "2",
+                "15",
+                "16"
+            ],
+            "Description": "&lt;i&gt;Rated Highest in Versatility and Performance!&lt;/i&gt;\r\n                For the NuMe girl who has to have it all, and then some. The Lustrum set includes five different,\n                interchangeable, 100% tourmaline-infused ceramic coated barrels; each with the ability to create the\n                most versatile curls and waves imaginable. Tourmaline technology means 600% more negative ions are\n                disbursed into hair, sealing in natural moisture and providing the most superior shine to tight,\n                medium-width, or loose, tumbling curls. Heat-resistant glove included.",
+            "Price": "249.00",
+            "Availability": "true"
+        },
+        {
+
+            "Name": "Titan 3",
+
+            "ProductUniqueID": "1124",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/titan-3-curling-iron-set/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/i/titan3_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-t3-blu_10.jpg",
+
+            "CategoriesID": [
+
+                "15",
+
+                "20"
+
+            ],
+
+            "Description": "The strong, 100% titanium barrel found in the Titan 3 is the top choice and most widely used\n                styling tool of celebrity stylists and hair professionals world-wide. The pure titanium-infused barrels\n                in 19mm, 25mm, and 32mm, are built for hair that has difficulty holding a curl, imparting the\n                longest-lasting hold possible. For tight curls and waves, a beachy-texture or the perfect bounce – Titan\n                3 is your premiere choice. Heat-resistant glove included.",
+
+            "Price": "199.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Test1",
+
+            "ProductUniqueID": "11288",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/titan-3-curling-iron-set/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/i/titan3_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-t3-blu_10.jpg",
+
+            "CategoriesID": [
+
+                "15",
+
+                "20"
+
+            ],
+
+            "Description": "The strong, 100% titanium barrel found in the Titan 3 is the top choice and most widely used\n                styling tool of celebrity stylists and hair professionals world-wide. The pure titanium-infused barrels\n                in 19mm, 25mm, and 32mm, are built for hair that has difficulty holding a curl, imparting the\n                longest-lasting hold possible. For tight curls and waves, a beachy-texture or the perfect bounce – Titan\n                3 is your premiere choice. Heat-resistant glove included.",
+
+            "Price": "199.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Curl Jam",
+
+            "ProductUniqueID": "755656564",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/curl-jam-curling-iron-set/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/u/curljam_1.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-cjam-blk_1_2.jpg",
+
+            "CategoriesID": [
+
+                "2",
+
+                "15",
+
+                "19",
+
+                "305"
+
+            ],
+
+            "Description": "NuMe, a leading force in breakthrough technology and luxury, has engaged the opulence of the\n                crushed gemstone tourmaline and paired it with powerful negative ions to dramatically smooth each lock\n                of hair, crafting curls and straight styles to perfection. Indulge in a rich styling experience with the\n                advantage of never having to choose. NuMe delivers four precision styling tools in one complete package.",
+
+            "Price": "199.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Classic Wand 32mm",
+
+            "ProductUniqueID": "5565566560",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/classic-curling-wand-32mm/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/l/classic_32mm_2.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/c/l/classic_32mm_2.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "24",
+
+                "33",
+
+                "305"
+
+            ],
+
+            "Description": "NuMe’s exclusive curling wand forms beautiful, romantic waves in half the time of other styling\n                tools, with an added luxury, a gemstone tourmaline-infused ceramic coated barrel. Tourmaline and ceramic\n                heat hair quickly and evenly, resulting in zero damage and a healthy shine. Negative ions are disbursed\n                through the barrel, conditioning hair from the inside-out and creating manageability necessary for\n                precision styling.",
+
+            "Price": "139.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar",
+
+            "ProductUniqueID": "1565656125",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar222",
+
+            "ProductUniqueID": "6551125222",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "269.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar255",
+
+            "ProductUniqueID": "1165562552",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "269.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar244",
+
+            "ProductUniqueID": "1125234344",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "469.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "1434123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "11256563",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "145454123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "1165656523",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "11233232323",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "15656123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Test1",
+
+            "ProductUniqueID": "165651288",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/titan-3-curling-iron-set/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/i/titan3_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-t3-blu_10.jpg",
+
+            "CategoriesID": [
+
+                "15",
+
+                "20"
+
+            ],
+
+            "Description": "The strong, 100% titanium barrel found in the Titan 3 is the top choice and most widely used\n                styling tool of celebrity stylists and hair professionals world-wide. The pure titanium-infused barrels\n                in 19mm, 25mm, and 32mm, are built for hair that has difficulty holding a curl, imparting the\n                longest-lasting hold possible. For tight curls and waves, a beachy-texture or the perfect bounce – Titan\n                3 is your premiere choice. Heat-resistant glove included.",
+
+            "Price": "199.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Curl Jam",
+
+            "ProductUniqueID": "7232354",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/curl-jam-curling-iron-set/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/u/curljam_1.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-cjam-blk_1_2.jpg",
+
+            "CategoriesID": [
+
+                "2",
+
+                "15",
+
+                "19",
+
+                "305"
+
+            ],
+
+            "Description": "NuMe, a leading force in breakthrough technology and luxury, has engaged the opulence of the\n                crushed gemstone tourmaline and paired it with powerful negative ions to dramatically smooth each lock\n                of hair, crafting curls and straight styles to perfection. Indulge in a rich styling experience with the\n                advantage of never having to choose. NuMe delivers four precision styling tools in one complete package.",
+
+            "Price": "199.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Classic Wand 32mm",
+
+            "ProductUniqueID": "2323550",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/classic-curling-wand-32mm/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/l/classic_32mm_2.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/c/l/classic_32mm_2.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "24",
+
+                "33",
+
+                "305"
+
+            ],
+
+            "Description": "NuMe’s exclusive curling wand forms beautiful, romantic waves in half the time of other styling\n                tools, with an added luxury, a gemstone tourmaline-infused ceramic coated barrel. Tourmaline and ceramic\n                heat hair quickly and evenly, resulting in zero damage and a healthy shine. Negative ions are disbursed\n                through the barrel, conditioning hair from the inside-out and creating manageability necessary for\n                precision styling.",
+
+            "Price": "139.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar",
+
+            "ProductUniqueID": "14545125",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar222",
+
+            "ProductUniqueID": "1125222",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "269.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar255",
+
+            "ProductUniqueID": "54112552",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "269.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar244",
+
+            "ProductUniqueID": "112527667644",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "469.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "1132232323",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "115445523",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "115454545423",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "134343123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "13434343123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "3443431123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Test1",
+
+            "ProductUniqueID": "5656511288",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/titan-3-curling-iron-set/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/i/titan3_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-t3-blu_10.jpg",
+
+            "CategoriesID": [
+
+                "15",
+
+                "20"
+
+            ],
+
+            "Description": "The strong, 100% titanium barrel found in the Titan 3 is the top choice and most widely used\n                styling tool of celebrity stylists and hair professionals world-wide. The pure titanium-infused barrels\n                in 19mm, 25mm, and 32mm, are built for hair that has difficulty holding a curl, imparting the\n                longest-lasting hold possible. For tight curls and waves, a beachy-texture or the perfect bounce – Titan\n                3 is your premiere choice. Heat-resistant glove included.",
+
+            "Price": "199.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Curl Jam",
+
+            "ProductUniqueID": "754",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/curl-jam-curling-iron-set/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/u/curljam_1.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-cjam-blk_1_2.jpg",
+
+            "CategoriesID": [
+
+                "2",
+
+                "15",
+
+                "19",
+
+                "305"
+
+            ],
+
+            "Description": "NuMe, a leading force in breakthrough technology and luxury, has engaged the opulence of the\n                crushed gemstone tourmaline and paired it with powerful negative ions to dramatically smooth each lock\n                of hair, crafting curls and straight styles to perfection. Indulge in a rich styling experience with the\n                advantage of never having to choose. NuMe delivers four precision styling tools in one complete package.",
+
+            "Price": "199.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Classic Wand 32mm",
+
+            "ProductUniqueID": "54545550",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/classic-curling-wand-32mm/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/l/classic_32mm_2.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/c/l/classic_32mm_2.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "24",
+
+                "33",
+
+                "305"
+
+            ],
+
+            "Description": "NuMe’s exclusive curling wand forms beautiful, romantic waves in half the time of other styling\n                tools, with an added luxury, a gemstone tourmaline-infused ceramic coated barrel. Tourmaline and ceramic\n                heat hair quickly and evenly, resulting in zero damage and a healthy shine. Negative ions are disbursed\n                through the barrel, conditioning hair from the inside-out and creating manageability necessary for\n                precision styling.",
+
+            "Price": "139.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar",
+
+            "ProductUniqueID": "6565657771125",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar222",
+
+            "ProductUniqueID": "177125222",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "269.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar255",
+
+            "ProductUniqueID": "1777712552",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "269.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar244",
+
+            "ProductUniqueID": "1125244",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "469.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "112787873",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "17878123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "7878561123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "4545451123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "187878123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "134343123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Test1",
+
+            "ProductUniqueID": "154541288",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/titan-3-curling-iron-set/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/i/titan3_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-t3-blu_10.jpg",
+
+            "CategoriesID": [
+
+                "15",
+
+                "20"
+
+            ],
+
+            "Description": "The strong, 100% titanium barrel found in the Titan 3 is the top choice and most widely used\n                styling tool of celebrity stylists and hair professionals world-wide. The pure titanium-infused barrels\n                in 19mm, 25mm, and 32mm, are built for hair that has difficulty holding a curl, imparting the\n                longest-lasting hold possible. For tight curls and waves, a beachy-texture or the perfect bounce – Titan\n                3 is your premiere choice. Heat-resistant glove included.",
+
+            "Price": "199.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Curl Jam",
+
+            "ProductUniqueID": "3434754",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/curl-jam-curling-iron-set/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/u/curljam_1.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-cjam-blk_1_2.jpg",
+
+            "CategoriesID": [
+
+                "2",
+
+                "15",
+
+                "19",
+
+                "305"
+
+            ],
+
+            "Description": "NuMe, a leading force in breakthrough technology and luxury, has engaged the opulence of the\n                crushed gemstone tourmaline and paired it with powerful negative ions to dramatically smooth each lock\n                of hair, crafting curls and straight styles to perfection. Indulge in a rich styling experience with the\n                advantage of never having to choose. NuMe delivers four precision styling tools in one complete package.",
+
+            "Price": "199.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Classic Wand 32mm",
+
+            "ProductUniqueID": "565655678550",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/classic-curling-wand-32mm/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/l/classic_32mm_2.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/c/l/classic_32mm_2.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "24",
+
+                "33",
+
+                "305"
+
+            ],
+
+            "Description": "NuMe’s exclusive curling wand forms beautiful, romantic waves in half the time of other styling\n                tools, with an added luxury, a gemstone tourmaline-infused ceramic coated barrel. Tourmaline and ceramic\n                heat hair quickly and evenly, resulting in zero damage and a healthy shine. Negative ions are disbursed\n                through the barrel, conditioning hair from the inside-out and creating manageability necessary for\n                precision styling.",
+
+            "Price": "139.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar",
+
+            "ProductUniqueID": "5454551125",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar222",
+
+            "ProductUniqueID": "115445452",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "269.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar255",
+
+            "ProductUniqueID": "16556567552",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "269.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "MegaStar244",
+
+            "ProductUniqueID": "881125244",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "23",
+
+                "31"
+
+            ],
+
+            "Description": "&lt;i&gt;Rated Best in Beauty Tools!&lt;/i&gt;&lt;br&gt;&lt;/br&gt;\r\n                A leader in cutting-edge styling tools, NuMe has designed a flat iron with an infrared heat strip built\n                into its tourmaline-infused ceramic coated plates. The strip comes into direct contact with hair,\n                emitting 1000% more negative ions for best-in-class shine and sleekness without damage or dryness.\n                Megastar delivers ionic pin-straight tresses or tousled waves with an incomparable shine and lasting\n                hold.",
+
+            "Price": "469.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "65341123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "4554671123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "675651123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "5651123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "3435461123",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        },
+        {
+
+            "Name": "Signature Dryer",
+
+            "ProductUniqueID": "116565662323",
+
+            "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+
+            "CategoriesID": [
+
+                "22",
+
+                "25",
+
+                "37"
+
+            ],
+
+            "Description": "The Signature Dryer is the official dryer of stylists and industry professionals. If you’re\n                seeking a perfectly smooth and glossy blowout while infusing moisture back into your hair, look no\n                further. Cutting-edge negative ion technology and the latest advancements in ergonomic design are behind\n                the power of the Signature Dryer, providing your hair with strength, major volume, and a seriously\n                luminous shine.",
+
+            "Price": "169.00",
+
+            "Availability": "true"
+
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+<div class="content productdetail anim-slide-below-fade"  data-anim-sync="true">
+    <!-- Initilize yotpo reviews widget with yotpo script directive -->
+    <script yotpo type="text/javascript"></script>
+
+    <div class="product-col-left">
+        <div class="pr-image-block">
+            <div class="clearfix" id="content">
+                <div class="product-image">
+                    <img src="{{product.ImageUrlFull}}" alt="{{product.Name}}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pr-data-block">
+        <h1>{{product.Name}}</h1>
+        <p class="product-description">{{product.Description}}</p>
+        <div class="price-box">
+            <span class="price">${{product.Price}}</span>
+            </span>
+        </div>
+        <a ui-sref="catalog">Back to Catalog</a>
+    </div>
+    <!-- use yotpo with this products info -->
+    <div class="yotpo yotpo-main-widget"
+         data-product-id="{{product.ProductUniqueID}}"
+         data-name="{{product.Name}}"
+         data-url="{{product.ProductUrl}}"
+         data-image-url="{{product.ImageUrlFull}}"
+         data-description="{{product.Description}}">
+    </div>
+
+</div>
+

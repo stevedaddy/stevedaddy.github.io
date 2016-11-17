@@ -1,0 +1,37 @@
+{
+  "name": "404-catalog",
+  "description": "404 catalog",
+  "main": [
+    "index.js",
+    "css/anim-in-out.css",
+    "scss/anim-in-out.scss"
+  ],
+  "authors": [
+    "Steve Tchorzewski"
+  ],
+  "version": "1.0.1",
+  "license": "ISC",
+  "ignore": [
+    "*",
+    "!anim-in-out.js",
+    "!css/*.css",
+    "!scss/*.scss"
+  ],
+  "homepage": "https://github.com/stevedaddy/404-catalog",
+  "dependencies": {
+    "angular": "latest",
+    "jquery": "latest",
+    "bootstrap": "latest",
+    "angular-ui-router": "^0.2.18",
+    "angular-animate": "^1.5.3",
+    "angular-filter": "^0.5.8",
+    "lodash": "^4.12.0",
+    "angular-ui-router-anim-in-out": "^1.0.2",
+    "angular-flexslider": "^1.3.2",
+    "flipclock": "FlipClock#^0.7.7",
+    "angular-toastr": "^1.7.0"
+  },
+  "resolutions": {
+    "angular": "1.5.6"
+  }
+}

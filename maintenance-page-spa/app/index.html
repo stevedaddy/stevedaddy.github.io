@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>NuMe 404 Catalog</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./styles/app.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="./bower_components/angular-ui-router-anim-in-out/css/anim-in-out.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="./bower_components/flexslider/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="./bower_components/flipclock/compiled/flipclock.css">
+    <link rel="stylesheet" type="text/css" href="./bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+    </style>
+
+    <!-- Place favicon.ico in the root directory -->
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <!--<link rel="stylesheet" href="css/main.css">-->
+    <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
+</head>
+<body class="cms-home">
+    <div class="maincontent" ng-app="catalogApp">
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header id="all">
+            <div class="container"><a ui-sref="catalog" class="nume-logo"><img src="http://numeproducts.com/skin/frontend/atypical/default/images/assets/nume-logo-2015.png" alt="NuMe"></a>
+                <h2>
+                    <span ng-if="!requestPolling" class="countdownmessage">Oops! This is a real 404</span>
+                    <span header ng-if="requestPolling"></span>
+                </h2>
+            </div>
+        </header>
+        <div ui-view class="catalog anim-in-out" autoscroll="whichState" data-anim-speed="1000"></div>
+    </div>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/flexslider/jquery.flexslider.js"></script>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-flexslider/angular-flexslider.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-ui-router-anim-in-out/anim-in-out.js"></script>
+    <script src="./bower_components/angular-filter/dist/angular-filter.js"></script>
+    <script src="./bower_components/lodash/dist/lodash.js"></script>
+    <script src="./bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <!--flipclock shoukd load only when the polling function is running-->
+    <script src="./bower_components/flipclock/compiled/flipclock.min.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/404-controller.js"></script>
+    <script src="src/catalog-controller.js"></script>
+    <script src="src/product-controller.js"></script>
+    <script src="src/data-service.js"></script>
+    <script src="src/poll-requested-page-service.js"></script>
+    <script src="src/routes.js"></script>
+    <script src="src/header-directive.js"></script>
+    <script src="src/countdown.js"></script>
+    <script src="src/carousel.js"></script>
+    <script src="src/yotpo-directive.js"></script>
+</body>
+</html>
