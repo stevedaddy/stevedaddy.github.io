@@ -1,87 +1,207 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Cuyana Test</title>
+    <title>Cuyana OO .js Test</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-	<main>
-	<div class="col-left"><img src="images/purse1.jpg">
-	</div>
-	<div class="col-right">
-		<div class="col-right--wrap">
-			<h2>Introducing</h2>
-			<h1>THE SAMPLE TEST</h1>
-			<p>Please create two javascript modals, preferably using the same script. The first will be a custom modal and the second will be a javascript alert() which you will “hijack” and insert using your modal script. Please get as close as you can to the mock. No need to do Header/Footer.</p>
-			<button type="button" class="button" id="myBtn">Open Modal</button>
-			<button type="button" class="button button--white" onclick="alert('An error has occurred.')">Open Alert</button>
-		</div>
-	</div>
-	</main>
-	<div id="myModal" class="modal">
-	  <div class="modal--content">
-	    <span class="close">×</span>
-	    <div id="modal-text"></div>
-	  </div>
-	</div>
-	<div id="email-signup">
-		<div class="email-signup--bg">
-			<div class="email-signup--wrapper">
-				<h2>INTRODUCING</h2>
-				<h1>THE CAPSULE COLLECTION</h1>
-				<form>
-		  			<input type="text" name="firstname" placeholder="ENTER EMAIL ADDRESS" />
-				</form>
-			</div>
-		</div>
-	</div>
-	<div id="error-alert">
-		<div class="error-alert--wrapper">
-			<h1>PARDON US</h1>
-			<p id="error-text"></p>
-		</div>
-	</div>
-	<script>
-		var modalText = 'Some text in the Modal..';
-		var modal = document.getElementById('myModal');
-		var btn = document.getElementById("myBtn");
-		var emailSignup =  document.getElementById("email-signup");
-		var errorAlert =  document.getElementById("error-alert");
-		console.log(emailSignup);
-		// span that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-		function showModal(){
-			modal.style.display = "block";
-		}
-		function hideModal(){
-			modal.style.display = "none";
-		}
-		// When the user clicks on the button, open the modal 
-		btn.onclick = function() {
-			document.getElementById("modal-text").innerHTML = emailSignup.innerHTML;
-		    showModal();
-		}
-		// When the user clicks on x, close the modal
-		span.onclick = function() {
-		    hideModal();
-		}
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		    if (event.target == modal) {
-		        hideModal();
-		    }
-		}
-		// Hijack alert function, inject replace the message, and show modal
-		window.alert = function(message){
-			document.getElementById("error-text").innerHTML = message;
-			document.getElementById("modal-text").innerHTML = errorAlert.innerHTML;
-			showModal();
-		}
+      <main>
+          <div class="col-left"><img src="images/purse1.jpg">
+          </div>
+          <div class="col-right">
+              <div class="col-right--wrap">
+                  <h2>Introducing</h2>
+                  <h1>THE SAMPLE TEST</h1>
+                  <p>Please create two javascript modals, preferably using the same script. The first will be a custom modal and the second will be a javascript alert() which you will “hijack” and insert using your modal script. Please get as close as you can to the mock. No need to do Header/Footer.</p>
+                  <button type="button" class="button trigger-button" data-src="email" id="myBtn">Open Modal</button>
+                  <button type="button" class="button button--white" onclick="alert('An error has occurred.')">Open Alert</button>
+              </div>
+          </div>
+      </main>
+
+      <!-- Content of sign up modal -->
+      <div id="email" class="modals sign-up-pane">
+          <div class="email-signup--bg">
+              <div class="email-signup--wrapper">
+                  <h2>INTRODUCING</h2>
+                  <h1>THE CAPSULE COLLECTION</h1>
+                  <form>
+                      <input name="firstname" placeholder="ENTER EMAIL ADDRESS" type="text">
+                  </form>
+              </div>
+          </div>
+      </div>
+
+	<script type="text/javascript">
+        // make it an IIFE to keep scope clean
+        (function() {
+            // constructor
+            this.Modal = function() {
+                //  globals
+                this.closeButton = null;
+                this.modal = null;
+                this.overlay = null;
+
+                //  prefix
+                this.transitionEnd = transitionSelect();
+
+                // option defaults
+                var defaults = {
+                    autoOpen: false,
+                    className: 'zoom',
+                    closeButton: true,
+                    content: "",
+                    maxWidth: 600,
+                    minWidth: 280,
+                    overlay: true
+                };
+
+                // Create options/extend defaults with arugments
+                if (arguments[0] && typeof arguments[0] === "object") {
+                    this.options = extendDefaults(defaults, arguments[0]);
+                }
+
+                // open right away if auto open set to true
+                if (this.options.autoOpen === true) this.open();
+            };
+
+            // Public Methods
+            Modal.prototype.close = function() {
+                var _ = this;
+                this.modal.className = this.modal.className.replace(" pane-open", "");
+                this.overlay.className = this.overlay.className.replace(" pane-open",
+                        "");
+                this.modal.addEventListener(this.transitionEnd, function() {
+                    _.modal.parentNode.removeChild(_.modal);
+                });
+                this.overlay.addEventListener(this.transitionEnd, function() {
+                    if (_.overlay.parentNode) _.overlay.parentNode.removeChild(_.overlay);
+                });
+            };
+
+            Modal.prototype.open = function() {
+                buildOut.call(this);
+                initializeEvents.call(this);
+                window.getComputedStyle(this.modal).height;
+                this.modal.className = this.modal.className +
+                (this.modal.offsetHeight > window.innerHeight ?
+                        " pane-open pane-anchored" : " pane-open");
+                this.overlay.className = this.overlay.className + " pane-open";
+            };
+
+            // Private Methods
+            function buildOut() {
+                var content, contentHolder, docFrag;
+
+                // config option setting will append string or if dom node append content
+                if (typeof this.options.content === "string") {
+                    content = this.options.content;
+                } else {
+                    content = this.options.content.innerHTML;
+                }
+
+                // fragment to build with
+                docFrag = document.createDocumentFragment();
+
+                // modal
+                this.modal = document.createElement("div");
+                this.modal.className = "pane-modal " + this.options.className;
+                this.modal.style.minWidth = this.options.minWidth + "px";
+                this.modal.style.maxWidth = this.options.maxWidth + "px";
+
+                // If closeButton option is true, add a close button
+                if (this.options.closeButton === true) {
+                    this.closeButton = document.createElement("button");
+                    this.closeButton.className = "pane-close close-button";
+                    this.closeButton.innerHTML = "&times;";
+                    this.modal.appendChild(this.closeButton);
+                }
+
+                // If overlay is true, add one
+                if (this.options.overlay === true) {
+                    this.overlay = document.createElement("div");
+                    this.overlay.className = "pane-overlay " + this.options.className;
+                    docFrag.appendChild(this.overlay);
+                }
+
+                // Create content area and append to modal
+                contentHolder = document.createElement("div");
+                contentHolder.className = "pane-content";
+                contentHolder.innerHTML = content;
+                this.modal.appendChild(contentHolder);
+
+                // Append modal to DocumentFragment
+                docFrag.appendChild(this.modal);
+
+                // Append DocumentFragment to body
+                document.body.appendChild(docFrag);
+            }
+
+            function extendDefaults(source, properties) {
+                var property;
+                for (property in properties) {
+                    if (properties.hasOwnProperty(property)) {
+                        source[property] = properties[property];
+                    }
+                }
+                return source;
+            }
+
+            function initializeEvents() {
+
+                if (this.closeButton) {
+                    this.closeButton.addEventListener('click', this.close.bind(this));
+                }
+
+                if (this.overlay) {
+                    this.overlay.addEventListener('click', this.close.bind(this));
+                }
+
+            }
+
+            function transitionSelect() {
+                var el = document.createElement("div");
+                if (el.style.WebkitTransition) return "webkitTransitionEnd";
+                if (el.style.OTransition) return "oTransitionEnd";
+                return 'transitionend';
+            }
+
+            // init modal and add click event listners for each of the buttons with trigger-button class
+            var modalButtons = document.getElementsByClassName("trigger-button");
+            Array.prototype.forEach.call(modalButtons, function(slide, index) {
+
+                var thisButton = modalButtons.item(index);
+                var thisButtonTarget = thisButton.getAttribute("data-src");
+
+                // if no data-src on the button don't init the modal or add the event listner
+                var myContent = document.getElementById(thisButtonTarget);
+                var myModal = new Modal({
+                    content: myContent,
+                    className: 'zoom',
+                    maxWidth: 702
+                });
+                slide.addEventListener('click', function() {
+                    myModal.open();
+                });
+
+            });
+
+            // Hijack alert function, inject replace the message, and show modal
+            window.alert = function(message) {
+                // It is also possible to populate the content of the modal without
+                // pulling anything from the dom to use, as shown below
+                var myModal = new Modal({
+                    content: '<div class="error-alert--wrapper"><h1>PARDON US</h1><p class="error-text">' + message + '</p></div>',
+                    className: 'zoom'
+                });
+                myModal.open();
+            }
+        }());
 	</script>
   </body>
 </html>
