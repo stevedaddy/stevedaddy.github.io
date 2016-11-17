@@ -1,4 +1,4 @@
-angular.module('ccApp', ['ui.router', 'ngAnimate'])
+angular.module('ccApp', ['ui.router', 'ngAnimate', 'ngResource'])
 .config(['$urlRouterProvider', '$httpProvider', '$stateProvider', function($urlRouterProvider, $httpProvider, $stateProvider){
     $httpProvider.defaults.useXDomain = true;
     // For any unmatched url, send to catalog home
@@ -69,7 +69,11 @@ angular.module('ccApp', ['ui.router', 'ngAnimate'])
             });
     }
 })
-.factory('api2', function($http, $q){
+.factory('productService', function ($resource) {
+    return $resource('http://jsonplaceholder.typicode.com/users/:user',{user: "@user"});
+        $scope.oneUser = UserService.get({user: 1});
+})
+.factory('api2', function($q){
     return {
         importCountries : importCountries
     };
